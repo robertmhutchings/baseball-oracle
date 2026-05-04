@@ -1,0 +1,33 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== PK uniqueness sanity (COUNT(*) should equal COUNT(DISTINCT key)) ==
++---------------------------------+-----------+---------------+------+
+|               pk                | row_count | distinct_keys | diff |
++---------------------------------+-----------+---------------+------+
+| ballparks(parkid)               |       629 |           629 |    0 |
+| games(gid)                      |    209311 |        209311 |    0 |
+| players(id)                     |     26223 |         26223 |    0 |
+| players_team_year(id,team,year) |    123558 |        123558 |    0 |
+| plays(gid,pn)                   |  15836549 |      15836549 |    0 |
+| relatives(id1,relation,id2)     |      1256 |          1256 |    0 |
+| teams(team)                     |       274 |           274 |    0 |
++---------------------------------+-----------+---------------+------+
+(7 rows)
+
+
+== Constraint declarations actually present in the DB ==
++-------------------------+------------------------+----------------------------------+
+|       table_name        |    constraint_name     |               def                |
++-------------------------+------------------------+----------------------------------+
+| retro.ballparks         | ballparks_pkey         | PRIMARY KEY (parkid)             |
+| retro.games             | games_pkey             | PRIMARY KEY (gid)                |
+| retro.players           | players_pkey           | PRIMARY KEY (id)                 |
+| retro.players_team_year | players_team_year_pkey | PRIMARY KEY (id, team, year)     |
+| retro.plays             | plays_pkey             | PRIMARY KEY (gid, pn)            |
+| retro.relatives         | relatives_pkey         | PRIMARY KEY (id1, relation, id2) |
+| retro.schema_version    | schema_version_pkey    | PRIMARY KEY (version)            |
+| retro.teams             | teams_pkey             | PRIMARY KEY (team)               |
++-------------------------+------------------------+----------------------------------+
+(8 rows)
+

@@ -1,0 +1,23 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+Jeter HRs in May 1998 — expected 4 HRs (5/2 KCA, 5/6 TEX, 5/13 TEX, 5/15 MIN).
++------------+---------------+--------+----------------+-------------+------------+
+| game_date  | opposing_team | inning |  pitcher_name  | ball_strike | runners_on |
++------------+---------------+--------+----------------+-------------+------------+
+| 1998-05-02 | KCA           |      1 | Chris Haney    | 02          | solo       |
+| 1998-05-06 | TEX           |      9 | John Wetteland | ??          | solo       |
+| 1998-05-13 | TEX           |      3 | Rick Helling   | 20          | 3-run      |
+| 1998-05-15 | MIN           |      7 | Mike Trombley  | 01          | solo       |
++------------+---------------+--------+----------------+-------------+------------+
+(4 rows)
+
+
+-- Summary count:
++--------------+
+| may_1998_hrs |
++--------------+
+|            4 |
++--------------+
+(1 row)
+

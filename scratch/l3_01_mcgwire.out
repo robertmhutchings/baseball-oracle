@@ -1,0 +1,74 @@
+ hr_number | game_date  | opposing_team |               ballpark_name               | inning |    pitcher_name    | ball_strike | runners_on 
+-----------+------------+---------------+-------------------------------------------+--------+--------------------+-------------+------------
+         1 | 1998-03-31 | LAN           | Busch Stadium II                          |      5 | Ramon Martinez     | 10          | grand slam
+         2 | 1998-04-02 | LAN           | Busch Stadium II                          |     12 | Frank Lankford     | 01          | 3-run
+         3 | 1998-04-03 | SDN           | Busch Stadium II                          |      5 | Mark Langston      | 32          | 2-run
+         4 | 1998-04-04 | SDN           | Busch Stadium II                          |      6 | Don Wengert        | 21          | 3-run
+         5 | 1998-04-14 | ARI           | Busch Stadium II                          |      3 | Jeff Suppan        | 12          | 2-run
+         6 | 1998-04-14 | ARI           | Busch Stadium II                          |      5 | Jeff Suppan        | 11          | solo
+         7 | 1998-04-14 | ARI           | Busch Stadium II                          |      8 | Barry Manuel       | 20          | 2-run
+         8 | 1998-04-17 | PHI           | Busch Stadium II                          |      4 | Matt Whiteside     | 22          | 2-run
+         9 | 1998-04-21 | MON           | Stade Olympique                           |      3 | Trey Moore         | 00          | 2-run
+        10 | 1998-04-25 | PHI           | Veterans Stadium                          |      7 | Jerry Spradlin     | 12          | 2-run
+        11 | 1998-04-30 | CHN           | Wrigley Field                             |      8 | Marc Pisciotta     | 21          | 2-run
+        12 | 1998-05-01 | CHN           | Wrigley Field                             |      9 | Rod Beck           | 12          | 2-run
+        13 | 1998-05-08 | NYN           | Shea Stadium                              |      3 | Rick Reed          | 02          | 2-run
+        14 | 1998-05-12 | MIL           | Busch Stadium II                          |      5 | Paul Wagner        | 12          | 3-run
+        15 | 1998-05-14 | ATL           | Busch Stadium II                          |      4 | Kevin Millwood     | 11          | solo
+        16 | 1998-05-16 | FLO           | Busch Stadium II                          |      4 | Livan Hernandez    | 10          | solo
+        17 | 1998-05-18 | FLO           | Busch Stadium II                          |      4 | Jesus Sanchez      | 20          | solo
+        18 | 1998-05-19 | PHI           | Veterans Stadium                          |      3 | Tyler Green        | 20          | 2-run
+        19 | 1998-05-19 | PHI           | Veterans Stadium                          |      5 | Tyler Green        | 02          | 2-run
+        20 | 1998-05-19 | PHI           | Veterans Stadium                          |      8 | Wayne Gomes        | 00          | 2-run
+        21 | 1998-05-22 | SFN           | Busch Stadium II                          |      6 | Mark Gardner       | 11          | 2-run
+        22 | 1998-05-23 | SFN           | Busch Stadium II                          |      4 | Rich Rodriguez     | 10          | solo
+        23 | 1998-05-23 | SFN           | Busch Stadium II                          |      5 | John Johnstone     | 22          | 3-run
+        24 | 1998-05-24 | SFN           | Busch Stadium II                          |     12 | Robb Nen           | 22          | 2-run
+        25 | 1998-05-25 | COL           | Busch Stadium II                          |      1 | John Thomson       | 22          | solo
+        26 | 1998-05-29 | SDN           | Qualcomm Stadium                          |      9 | Dan Miceli         | 00          | 2-run
+        27 | 1998-05-30 | SDN           | Qualcomm Stadium                          |      1 | Andy Ashby         | 01          | solo
+        28 | 1998-06-05 | SFN           | Busch Stadium II                          |      1 | Orel Hershiser     | 12          | 2-run
+        29 | 1998-06-08 | CHA           | Guaranteed Rate Field;U.S. Cellular Field |      4 | Jason Bere         | 00          | 2-run
+        30 | 1998-06-10 | CHA           | Guaranteed Rate Field;U.S. Cellular Field |      3 | Jim Parque         | 10          | 3-run
+        31 | 1998-06-12 | ARI           | Chase Field                               |      3 | Andy Benes         | 10          | grand slam
+        32 | 1998-06-17 | HOU           | Astrodome                                 |      3 | Jose Lima          | 12          | solo
+        33 | 1998-06-18 | HOU           | Astrodome                                 |      5 | Shane Reynolds     | 11          | solo
+        34 | 1998-06-24 | CLE           | Progressive Field                         |      4 | Jaret Wright       | 11          | solo
+        35 | 1998-06-25 | CLE           | Progressive Field                         |      1 | Dave Burba         | 22          | solo
+        36 | 1998-06-27 | MIN           | Hubert H. Humphrey Metrodome              |      7 | Mike Trombley      | 22          | 2-run
+        37 | 1998-06-30 | KCA           | Busch Stadium II                          |      7 | Glendon Rusch      | 01          | solo
+        38 | 1998-07-11 | HOU           | Busch Stadium II                          |     11 | Billy Wagner       | 02          | 2-run
+        39 | 1998-07-12 | HOU           | Busch Stadium II                          |      1 | Sean Bergman       | 00          | solo
+        40 | 1998-07-12 | HOU           | Busch Stadium II                          |      7 | Scott Elarton      | 21          | solo
+        41 | 1998-07-17 | LAN           | Busch Stadium II                          |      1 | Brian Bohanon      | 00          | solo
+        42 | 1998-07-17 | LAN           | Busch Stadium II                          |      8 | Antonio Osuna      | 10          | solo
+        43 | 1998-07-20 | SDN           | Qualcomm Stadium                          |      5 | Brian Boehringer   | 21          | 2-run
+        44 | 1998-07-26 | COL           | Coors Field                               |      4 | John Thomson       | 00          | solo
+        45 | 1998-07-28 | MIL           | Busch Stadium II                          |      8 | Mike Myers         | 22          | solo
+        46 | 1998-08-08 | CHN           | Busch Stadium II                          |      4 | Mark Clark         | 21          | solo
+        47 | 1998-08-11 | NYN           | Busch Stadium II                          |      4 | Bobby Jones        | 10          | solo
+        48 | 1998-08-19 | CHN           | Wrigley Field                             |      8 | Matt Karchner      | 31          | solo
+        49 | 1998-08-19 | CHN           | Wrigley Field                             |     10 | Terry Mulholland   | 20          | solo
+        50 | 1998-08-20 | NYN           | Shea Stadium                              |      1 | Rick Reed          | 32          | solo
+        51 | 1998-08-20 | NYN           | Shea Stadium                              |      7 | Willie Blair       | 21          | solo
+        52 | 1998-08-22 | PIT           | Three Rivers Stadium                      |      1 | Francisco Cordova  | 02          | solo
+        53 | 1998-08-23 | PIT           | Three Rivers Stadium                      |      8 | Ricardo Rincon     | 22          | solo
+        54 | 1998-08-26 | FLO           | Busch Stadium II                          |      8 | Justin Speier      | 01          | 2-run
+        55 | 1998-08-30 | ATL           | Busch Stadium II                          |      7 | Dennis Martinez    | 10          | 3-run
+        56 | 1998-09-01 | FLO           | Sun Life Stadium                          |      7 | Livan Hernandez    | 11          | solo
+        57 | 1998-09-01 | FLO           | Sun Life Stadium                          |      9 | Donn Pall          | 00          | solo
+        58 | 1998-09-02 | FLO           | Sun Life Stadium                          |      7 | Brian Edmondson    | 21          | 2-run
+        59 | 1998-09-02 | FLO           | Sun Life Stadium                          |      8 | Rob Stanifer       | 00          | 2-run
+        60 | 1998-09-05 | CIN           | Busch Stadium II                          |      1 | Dennys Reyes       | 20          | 2-run
+        61 | 1998-09-07 | CHN           | Busch Stadium II                          |      1 | Mike Morgan        | 11          | solo
+        62 | 1998-09-08 | CHN           | Busch Stadium II                          |      4 | Steve Trachsel     | 00          | solo
+        63 | 1998-09-15 | PIT           | Busch Stadium II                          |      9 | Jason Christiansen | 10          | solo
+        64 | 1998-09-18 | MIL           | County Stadium                            |      4 | Rafael Roque       | 31          | 2-run
+        65 | 1998-09-20 | MIL           | County Stadium                            |      1 | Scott Karl         | 21          | 2-run
+        66 | 1998-09-25 | MON           | Busch Stadium II                          |      5 | Shayne Bennett     | 12          | 2-run
+        67 | 1998-09-26 | MON           | Busch Stadium II                          |      4 | Dustin Hermanson   | 00          | solo
+        68 | 1998-09-26 | MON           | Busch Stadium II                          |      7 | Kirk Bullinger     | 11          | 2-run
+        69 | 1998-09-27 | MON           | Busch Stadium II                          |      3 | Mike Thurman       | 11          | solo
+        70 | 1998-09-27 | MON           | Busch Stadium II                          |      7 | Carl Pavano        | 00          | 3-run
+(70 rows)
+

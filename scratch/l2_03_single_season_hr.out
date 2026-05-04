@@ -1,0 +1,39 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== Resolved retroIDs ==
++----------+---------+----------+
+|    id    | usename | lastname |
++----------+---------+----------+
+| bondb001 | Barry   | Bonds    |
+| marir101 | Roger   | Maris    |
+| mcgwm001 | Mark    | McGwire  |
++----------+---------+----------+
+(3 rows)
+
+
+== Single-season HR totals (regular season + value stattype) ==
++--------------+-----------+-------------+-------+-----------+------+
+|    label     | target_id | target_year | db_hr | target_hr | diff |
++--------------+-----------+-------------+-------+-----------+------+
+| Roger Maris  | marir101  |        1961 |    61 |        61 |    0 |
+| Mark McGwire | mcgwm001  |        1998 |    70 |        70 |    0 |
+| Barry Bonds  | bondb001  |        2001 |    73 |        73 |    0 |
++--------------+-----------+-------------+-------+-----------+------+
+(3 rows)
+
+
+== Per-gametype breakdown for transparency ==
++----------+------+-------------+----+-------+
+|    id    |  yr  |  gametype   | hr | games |
++----------+------+-------------+----+-------+
+| marir101 | 1961 | allstar     |  0 |     2 |
+| marir101 | 1961 | regular     | 61 |   161 |
+| marir101 | 1961 | worldseries |  1 |     5 |
+| mcgwm001 | 1998 | allstar     |  0 |     1 |
+| mcgwm001 | 1998 | regular     | 70 |   155 |
+| bondb001 | 2001 | allstar     |  0 |     1 |
+| bondb001 | 2001 | regular     | 73 |   153 |
++----------+------+-------------+----+-------+
+(7 rows)
+

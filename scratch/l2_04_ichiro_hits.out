@@ -1,0 +1,48 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== Resolve Ichiro retroID — try multiple lookup forms ==
++----------+---------+----------+---------------+----------+----------+
+|    id    | usename | lastname |   fullname    | debut_p  |  last_p  |
++----------+---------+----------+---------------+----------+----------+
+| suzui001 | Ichiro  | Suzuki   | Ichiro Suzuki | 20010402 | 20190321 |
++----------+---------+----------+---------------+----------+----------+
+(1 row)
+
+
+== Backup lookup if Retrosheet stored the name unconventionally ==
++----------+---------+----------+---------------+---------+
+|    id    | usename | lastname |   fullname    | altname |
++----------+---------+----------+---------------+---------+
+| suzui001 | Ichiro  | Suzuki   | Ichiro Suzuki | (null)  |
++----------+---------+----------+---------------+---------+
+(1 row)
+
+
+== Ichiro 2004 hits aggregation (using suzui001 per user prompt; verify above first) ==
++---------------+-----------+-------------+---------+-------------+------+
+|     label     | target_id | target_year | db_hits | target_hits | diff |
++---------------+-----------+-------------+---------+-------------+------+
+| Ichiro Suzuki | suzui001  |        2004 |     262 |         262 |    0 |
++---------------+-----------+-------------+---------+-------------+------+
+(1 row)
+
+
+== Per-gametype hits breakdown for transparency ==
++----------+----------+------+-------+---------+
+|    id    | gametype | hits | games | at_bats |
++----------+----------+------+-------+---------+
+| suzui001 | allstar  |    1 |     1 |       4 |
+| suzui001 | regular  |  262 |   161 |     704 |
++----------+----------+------+-------+---------+
+(2 rows)
+
+
+== Cross-check via plays.single+double+triple+hr ==
++----------+----------------+---------+
+|    id    | hits_via_plays | at_bats |
++----------+----------------+---------+
+| suzui001 |            262 |     704 |
++----------+----------------+---------+
+(1 row)
+

@@ -1,0 +1,8 @@
+Cycles in 1998 — single + double + triple + HR by the same batter in the same game. natural_cycle=TRUE if the first of each type occurred in canonical order.
+  player_name   | game_date  | opposing_team |     ballpark_name     | singles | doubles | triples | home_runs | natural_cycle |          hit_sequence           
+----------------+------------+---------------+-----------------------+---------+---------+---------+-----------+---------------+---------------------------------
+ Mike Blowers   | 1998-05-18 | CHA           | Guaranteed Rate Field |       1 |       1 |       1 |         1 | f             | HR(i2), 2B(i5), 1B(i7), 3B(i8)
+ Dante Bichette | 1998-06-10 | TEX           | Coors Field           |       1 |       1 |       1 |         1 | f             | 2B(i4), HR(i6), 3B(i9), 1B(i10)
+ Neifi Perez    | 1998-07-25 | SLN           | Coors Field           |       1 |       1 |       1 |         1 | f             | 2B(i1), 3B(i3), 1B(i5), HR(i7)
+(3 rows)
+

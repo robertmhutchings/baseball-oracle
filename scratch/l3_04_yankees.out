@@ -1,0 +1,35 @@
+psql:C:/BaseballOracle/scratch/q05_yankees_close_vs_blowouts.sql:18: NOTICE:  table "tmp_yg_1998" does not exist, skipping
+DROP TABLE
+SELECT 162
+
+=== Sanity check: 1998 Yankees regular-season record ===
+(Expected: 162 games, 114-48-0 per historical record)
+ total_games | wins | losses | ties | wpct  
+-------------+------+--------+------+-------
+         162 |  114 |     48 |    0 | 0.704
+(1 row)
+
+
+=== Section A: Yankees in close games, 1998 ===
+Close = margin ≤ 2 runs at any point from end of 7th through end of 9th (extras qualify automatically).
+ close_games | close_wins | close_losses | close_wpct 
+-------------+------------+--------------+------------
+          77 |         54 |           23 |      0.701
+(1 row)
+
+
+=== Section B: Yankees in blowouts, 1998 ===
+Blowout = margin ≥ 7 runs at end of the 6th inning. Split by who led at end of 6.
+        situation         | games | yankees_wins | yankees_losses | avg_margin_end_of_6 | avg_final_margin | min_final_margin | max_final_margin 
+--------------------------+-------+--------------+----------------+---------------------+------------------+------------------+------------------
+ Opponent led at end of 6 |     6 |            0 |              6 |                7.67 |             7.33 |                5 |               11
+ Yankees led at end of 6  |    15 |           15 |              0 |                8.87 |             8.93 |                3 |               13
+(2 rows)
+
+
+=== Section C: Comeback games (blowout at end of 6 AND close by end of 9) ===
+ game_date | opponent | end_of_6_y_vs_o | end_of_9_y_vs_o | final_y_vs_o | winner | narrative 
+-----------+----------+-----------------+-----------------+--------------+--------+-----------
+(0 rows)
+
+DROP TABLE

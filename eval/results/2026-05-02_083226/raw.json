@@ -1,0 +1,2107 @@
+{
+  "run_metadata": {
+    "timestamp": "2026-05-02_083226",
+    "model": "claude-sonnet-4-6",
+    "n_questions": 10,
+    "duration_seconds": 304.06
+  },
+  "summary": {
+    "pass": 7,
+    "fail": 1,
+    "review_needed": 2
+  },
+  "questions": [
+    {
+      "id": "Q1_jeter_hr_may_1998",
+      "spec": {
+        "id": "Q1_jeter_hr_may_1998",
+        "question": "How many home runs did Derek Jeter hit in May 1998?",
+        "category": "verifiable",
+        "expected_answer": "4",
+        "expected_behavior": null,
+        "must_contain": [
+          "jeter",
+          "4",
+          "may"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 1 Q1. 4 HRs: 5/2 vs KCA, 5/6 vs TEX, 5/13 vs TEX, 5/15 vs MIN."
+      },
+      "response_text": "Derek Jeter hit **4 home runs** in May 1998. That was part of his strong 1998 season with the Yankees, who went on to win the World Series that year.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "Jeter"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 4,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "downj001",
+                "usename": "Jeter",
+                "lastname": "Downs",
+                "fullname": "Jeter Deion Downs",
+                "altname": null,
+                "debut_year": 2022,
+                "last_year": 2023,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "jeted001",
+                "usename": "Derek",
+                "lastname": "Jeter",
+                "fullname": "Derek Sanderson Jeter",
+                "altname": null,
+                "debut_year": 1995,
+                "last_year": 2014,
+                "bats": "R",
+                "throws": "R",
+                "hof": "HOF"
+              },
+              {
+                "id": "jetej101",
+                "usename": "Johnny",
+                "lastname": "Jeter",
+                "fullname": "John Jeter",
+                "altname": null,
+                "debut_year": 1969,
+                "last_year": 1974,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "jetes001",
+                "usename": "Shawn",
+                "lastname": "Jeter",
+                "fullname": "Shawn Darrell Jeter",
+                "altname": null,
+                "debut_year": 1992,
+                "last_year": 1992,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(hr) AS home_runs\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nWHERE p.batter = 'jeted001'\n  AND g.gametype = 'regular'\n  AND g.date BETWEEN '1998-05-01' AND '1998-05-31'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "home_runs"
+            ],
+            "rows": [
+              {
+                "home_runs": 4
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 1 run_sql",
+      "duration_seconds": 7.69,
+      "evaluation": {
+        "id": "Q1_jeter_hr_may_1998",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 149 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 3 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '4' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "2 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q2_mcgwire_1998_hrs",
+      "spec": {
+        "id": "Q2_mcgwire_1998_hrs",
+        "question": "How many home runs did Mark McGwire hit in 1998?",
+        "category": "verifiable",
+        "expected_answer": "70",
+        "expected_behavior": null,
+        "must_contain": [
+          "mcgwire",
+          "70"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 1 Q2. Record-breaking season; #62 off Trachsel 9/8, #70 off Pavano 9/27."
+      },
+      "response_text": "**70 home runs.** That's the legendary 1998 season where McGwire broke Roger Maris's single-season record of 61, which had stood since 1961. It was one of the most-watched home run chases in baseball history, with Sammy Sosa right on his heels finishing with 66.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "McGwire"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 1,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "mcgwm001",
+                "usename": "Mark",
+                "lastname": "McGwire",
+                "fullname": "Mark David McGwire",
+                "altname": null,
+                "debut_year": 1986,
+                "last_year": 2001,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(hr) AS home_runs\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nWHERE p.batter = 'mcgwm001'\n  AND EXTRACT(YEAR FROM g.date) = 1998\n  AND g.gametype = 'regular'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "home_runs"
+            ],
+            "rows": [
+              {
+                "home_runs": 70
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 1 run_sql",
+      "duration_seconds": 7.66,
+      "evaluation": {
+        "id": "Q2_mcgwire_1998_hrs",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 262 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '70' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "2 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q3_lhb_vs_lhp_1998",
+      "spec": {
+        "id": "Q3_lhb_vs_lhp_1998",
+        "question": "Who were the best left-handed batters against left-handed pitchers in 1998?",
+        "category": "process_check",
+        "expected_answer": null,
+        "expected_behavior": "surface_threshold_and_list_leaders",
+        "must_contain": [
+          "olerud"
+        ],
+        "must_not_contain": [],
+        "verifiable": false,
+        "manual_review_required": true,
+        "notes": "Phase 1 Q3. Top with 150-AB floor: Olerud .375, Vaughn .340, Greer .328, Floyd .325, Vina .324. Good answer surfaces the AB threshold (Andy Fox / dynamism principle, CLAUDE.md \u00a78). Olerud must appear; threshold-surfacing and switch-hitter handling judged on manual review."
+      },
+      "response_text": "Here are the best lefty-on-lefty hitters from 1998 (min. 50 AB), ranked by OPS:\n\n| Player | AB | AVG | OBP | SLG | OPS | HR |\n|---|---|---|---|---|---|---|\n| **Ken Griffey Jr.** | 177 | .299 | .350 | .701 | 1.051 | 21 |\n| **John Olerud** | 152 | .375 | .451 | .513 | .964 | 5 |\n| **Barry Bonds** | 167 | .281 | .406 | .497 | .903 | 9 |\n| **Mo Vaughn** | 198 | .333 | .377 | .586 | .963 | 14 |\n| **Larry Walker** | 131 | .321 | .405 | .511 | .916 | 3 |\n| **Rafael Palmeiro** | 230 | .317 | .375 | .591 | .966 | 15 |\n| **Tony Gwynn** | 161 | .323 | .358 | .534 | .892 | 8 |\n| **Will Clark** | 147 | .327 | .373 | .517 | .890 | 5 |\n| **Rusty Greer** | 175 | .337 | .386 | .451 | .837 | 4 |\n\nA few standouts:\n\n- **Griffey** absolutely mashed lefties \u2014 a .701 SLG and 21 HR against them is extraordinary, especially given lefty-on-lefty is supposed to favor the pitcher.\n- **John Olerud** had the best AVG/OBP combo in this group (.375/.451), though with little power. Classic Olerud \u2014 he just made contact against everybody.\n- **Bonds** drew 39 walks in just 167 AB against lefties, showing pitchers were already handling him carefully.\n- **Mo Vaughn** and **Palmeiro** were both big-time lefty mashers with excellent OPS well north of .900.\n\nThe conventional wisdom about lefties struggling against same-handed pitching clearly didn't apply to this crew. Griffey in particular was one of the few hitters who was genuinely dangerous regardless of the handedness matchup.",
+      "trace": [
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT\n    p.batter,\n    pl.usename || ' ' || pl.lastname AS player_name,\n    COUNT(*) FILTER (WHERE p.ab = 1) AS ab,\n    SUM(p.single + p.double + p.triple + p.hr) AS hits,\n    SUM(p.hr) AS hr,\n    SUM(p.walk) AS bb,\n    SUM(p.k) AS k,\n    ROUND(SUM(p.single + p.double + p.triple + p.hr)::numeric / NULLIF(COUNT(*) FILTER (WHERE p.ab = 1), 0), 3) AS avg,\n    ROUND((SUM(p.single + p.double + p.triple + p.hr) + SUM(p.walk))::numeric / NULLIF(COUNT(*) FILTER (WHERE p.pa = 1), 0), 3) AS obp,\n    ROUND((SUM(p.single) + 2*SUM(p.double) + 3*SUM(p.triple) + 4*SUM(p.hr))::numeric / NULLIF(COUNT(*) FILTER (WHERE p.ab = 1), 0), 3) AS slg\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nJOIN retro.players pl ON p.batter = pl.id\nWHERE g.gametype = 'regular'\n  AND EXTRACT(YEAR FROM g.date) = 1998\n  AND p.bathand = 'L'\n  AND p.pithand = 'L'\nGROUP BY p.batter, player_name\nHAVING COUNT(*) FILTER (WHERE p.ab = 1) >= 50\nORDER BY ROUND((SUM(p.single + p.double + p.triple + p.hr) + SUM(p.walk))::numeric / NULLIF(COUNT(*) FILTER (WHERE p.pa = 1), 0), 3) +\n         ROUND((SUM(p.single) + 2*SUM(p.double) + 3*SUM(p.triple) + 4*SUM(p.hr))::numeric / NULLIF(COUNT(*) FILTER (WHERE p.ab = 1), 0), 3) DESC\nLIMIT 20;\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 20,
+            "truncated": false,
+            "columns": [
+              "batter",
+              "player_name",
+              "ab",
+              "hits",
+              "hr",
+              "bb",
+              "k",
+              "avg",
+              "obp",
+              "slg"
+            ],
+            "rows": [
+              {
+                "batter": "grifk002",
+                "player_name": "Ken Griffey",
+                "ab": 177,
+                "hits": 53,
+                "hr": 21,
+                "bb": 16,
+                "k": 33,
+                "avg": 0.299,
+                "obp": 0.35,
+                "slg": 0.701
+              },
+              {
+                "batter": "palmr001",
+                "player_name": "Rafael Palmeiro",
+                "ab": 230,
+                "hits": 73,
+                "hr": 15,
+                "bb": 23,
+                "k": 34,
+                "avg": 0.317,
+                "obp": 0.375,
+                "slg": 0.591
+              },
+              {
+                "batter": "olerj001",
+                "player_name": "John Olerud",
+                "ab": 152,
+                "hits": 57,
+                "hr": 5,
+                "bb": 25,
+                "k": 22,
+                "avg": 0.375,
+                "obp": 0.451,
+                "slg": 0.513
+              },
+              {
+                "batter": "vaugm001",
+                "player_name": "Mo Vaughn",
+                "ab": 198,
+                "hits": 66,
+                "hr": 14,
+                "bb": 17,
+                "k": 61,
+                "avg": 0.333,
+                "obp": 0.377,
+                "slg": 0.586
+              },
+              {
+                "batter": "walkl001",
+                "player_name": "Larry Walker",
+                "ab": 131,
+                "hits": 42,
+                "hr": 3,
+                "bb": 20,
+                "k": 21,
+                "avg": 0.321,
+                "obp": 0.405,
+                "slg": 0.511
+              },
+              {
+                "batter": "bondb001",
+                "player_name": "Barry Bonds",
+                "ab": 167,
+                "hits": 47,
+                "hr": 9,
+                "bb": 39,
+                "k": 25,
+                "avg": 0.281,
+                "obp": 0.406,
+                "slg": 0.497
+              },
+              {
+                "batter": "gwynt001",
+                "player_name": "Tony Gwynn",
+                "ab": 161,
+                "hits": 52,
+                "hr": 8,
+                "bb": 10,
+                "k": 6,
+                "avg": 0.323,
+                "obp": 0.358,
+                "slg": 0.534
+              },
+              {
+                "batter": "clarw001",
+                "player_name": "Will Clark",
+                "ab": 147,
+                "hits": 48,
+                "hr": 5,
+                "bb": 14,
+                "k": 34,
+                "avg": 0.327,
+                "obp": 0.373,
+                "slg": 0.517
+              },
+              {
+                "batter": "thomj002",
+                "player_name": "Jim Thome",
+                "ab": 142,
+                "hits": 41,
+                "hr": 7,
+                "bb": 20,
+                "k": 49,
+                "avg": 0.289,
+                "obp": 0.367,
+                "slg": 0.5
+              },
+              {
+                "batter": "lawtm002",
+                "player_name": "Matt Lawton",
+                "ab": 131,
+                "hits": 36,
+                "hr": 6,
+                "bb": 21,
+                "k": 15,
+                "avg": 0.275,
+                "obp": 0.361,
+                "slg": 0.504
+              },
+              {
+                "batter": "delgc001",
+                "player_name": "Carlos Delgado",
+                "ab": 155,
+                "hits": 47,
+                "hr": 5,
+                "bb": 18,
+                "k": 42,
+                "avg": 0.303,
+                "obp": 0.359,
+                "slg": 0.484
+              },
+              {
+                "batter": "greer001",
+                "player_name": "Rusty Greer",
+                "ab": 175,
+                "hits": 59,
+                "hr": 4,
+                "bb": 19,
+                "k": 28,
+                "avg": 0.337,
+                "obp": 0.386,
+                "slg": 0.451
+              },
+              {
+                "batter": "floyc001",
+                "player_name": "Cliff Floyd",
+                "ab": 154,
+                "hits": 50,
+                "hr": 3,
+                "bb": 5,
+                "k": 36,
+                "avg": 0.325,
+                "obp": 0.342,
+                "slg": 0.494
+              },
+              {
+                "batter": "heltt001",
+                "player_name": "Todd Helton",
+                "ab": 112,
+                "hits": 34,
+                "hr": 5,
+                "bb": 13,
+                "k": 12,
+                "avg": 0.304,
+                "obp": 0.353,
+                "slg": 0.482
+              },
+              {
+                "batter": "ventr001",
+                "player_name": "Robin Ventura",
+                "ab": 155,
+                "hits": 43,
+                "hr": 7,
+                "bb": 20,
+                "k": 31,
+                "avg": 0.277,
+                "obp": 0.352,
+                "slg": 0.477
+              },
+              {
+                "batter": "staim001",
+                "player_name": "Matt Stairs",
+                "ab": 164,
+                "hits": 46,
+                "hr": 8,
+                "bb": 14,
+                "k": 30,
+                "avg": 0.28,
+                "obp": 0.33,
+                "slg": 0.488
+              },
+              {
+                "batter": "lankr001",
+                "player_name": "Ray Lankford",
+                "ab": 140,
+                "hits": 37,
+                "hr": 6,
+                "bb": 24,
+                "k": 45,
+                "avg": 0.264,
+                "obp": 0.359,
+                "slg": 0.457
+              },
+              {
+                "batter": "joynw001",
+                "player_name": "Wally Joyner",
+                "ab": 114,
+                "hits": 35,
+                "hr": 3,
+                "bb": 11,
+                "k": 11,
+                "avg": 0.307,
+                "obp": 0.365,
+                "slg": 0.447
+              },
+              {
+                "batter": "fox-a001",
+                "player_name": "Andy Fox",
+                "ab": 96,
+                "hits": 32,
+                "hr": 0,
+                "bb": 9,
+                "k": 17,
+                "avg": 0.333,
+                "obp": 0.376,
+                "slg": 0.427
+              },
+              {
+                "batter": "martt002",
+                "player_name": "Tino Martinez",
+                "ab": 168,
+                "hits": 45,
+                "hr": 9,
+                "bb": 13,
+                "k": 37,
+                "avg": 0.268,
+                "obp": 0.314,
+                "slg": 0.488
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 run_sql",
+      "duration_seconds": 19.02,
+      "evaluation": {
+        "id": "Q3_lhb_vs_lhp_1998",
+        "category": "process_check",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 1466 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 1 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "skip",
+            "detail": "no expected_answer specified"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "1 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": true,
+        "overall": "review_needed"
+      },
+      "error": null
+    },
+    {
+      "id": "Q4_1998_cycles",
+      "spec": {
+        "id": "Q4_1998_cycles",
+        "question": "Who hit for the cycle in 1998?",
+        "category": "process_check",
+        "expected_answer": null,
+        "expected_behavior": "list_all_three",
+        "must_contain": [
+          "blowers",
+          "bichette",
+          "perez"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": true,
+        "notes": "Phase 1 Q4. Three cycles: Mike Blowers (5/18 at CHA), Dante Bichette (6/10 vs TEX), Neifi Perez (7/25 vs SLN). All three names should appear; any extra names are likely false positives worth investigating."
+      },
+      "response_text": "Three players hit for the cycle in 1998:\n\n| Date | Player | Team | Opponent (park) |\n|------|--------|------|-----------------|\n| May 18 | **Mike Blowers** | Oakland Athletics | @ Chicago White Sox |\n| June 10 | **Dante Bichette** | Colorado Rockies | vs. Colorado (home) |\n| July 25 | **Neifi Perez** | Colorado Rockies | vs. Colorado (home) |\n\nA fun footnote: two of the three cycles happened at Coors Field, which makes perfect sense \u2014 the thin mile-high air that turns lazy fly balls into homers and gaps into triples is cycle-friendly territory. Bichette and Perez both pulled it off in Denver within about six weeks of each other.",
+      "trace": [
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT \n    p.gid,\n    g.date,\n    pl.usename || ' ' || pl.lastname AS player_name,\n    bat.batteam,\n    SUM(bat.single) AS singles,\n    SUM(bat.double) AS doubles,\n    SUM(bat.triple) AS triples,\n    SUM(bat.hr) AS hrs\nFROM retro.plays bat\nJOIN retro.games g ON bat.gid = g.gid\nJOIN retro.players pl ON bat.batter = pl.id\nWHERE EXTRACT(YEAR FROM g.date) = 1998\n  AND g.gametype = 'regular'\nGROUP BY p.gid, g.date, pl.usename, pl.lastname, bat.batter, bat.batteam\nHAVING SUM(bat.single) >= 1 AND SUM(bat.double) >= 1 AND SUM(bat.triple) >= 1 AND SUM(bat.hr) >= 1\nORDER BY g.date\n"
+          },
+          "tool_output": {
+            "ok": false,
+            "error_type": "UndefinedTable",
+            "error_message": "missing FROM-clause entry for table \"p\"\nLINE 3:     p.gid,\n            ^"
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT \n    bat.gid,\n    g.date,\n    pl.usename || ' ' || pl.lastname AS player_name,\n    bat.batteam,\n    SUM(bat.single) AS singles,\n    SUM(bat.double) AS doubles,\n    SUM(bat.triple) AS triples,\n    SUM(bat.hr) AS hrs\nFROM retro.plays bat\nJOIN retro.games g ON bat.gid = g.gid\nJOIN retro.players pl ON bat.batter = pl.id\nWHERE EXTRACT(YEAR FROM g.date) = 1998\n  AND g.gametype = 'regular'\nGROUP BY bat.gid, g.date, pl.usename, pl.lastname, bat.batter, bat.batteam\nHAVING SUM(bat.single) >= 1 AND SUM(bat.double) >= 1 AND SUM(bat.triple) >= 1 AND SUM(bat.hr) >= 1\nORDER BY g.date\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 3,
+            "truncated": false,
+            "columns": [
+              "gid",
+              "date",
+              "player_name",
+              "batteam",
+              "singles",
+              "doubles",
+              "triples",
+              "hrs"
+            ],
+            "rows": [
+              {
+                "gid": "CHA199805180",
+                "date": "1998-05-18",
+                "player_name": "Mike Blowers",
+                "batteam": "OAK",
+                "singles": 1,
+                "doubles": 1,
+                "triples": 1,
+                "hrs": 1
+              },
+              {
+                "gid": "COL199806100",
+                "date": "1998-06-10",
+                "player_name": "Dante Bichette",
+                "batteam": "COL",
+                "singles": 1,
+                "doubles": 1,
+                "triples": 1,
+                "hrs": 1
+              },
+              {
+                "gid": "COL199807250",
+                "date": "1998-07-25",
+                "player_name": "Neifi Perez",
+                "batteam": "COL",
+                "singles": 1,
+                "doubles": 1,
+                "triples": 1,
+                "hrs": 1
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT t.city || ' ' || t.nickname AS team_name, t.team\nFROM retro.teams t\nWHERE t.team IN ('OAK', 'COL')\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 2,
+            "truncated": false,
+            "columns": [
+              "team_name",
+              "team"
+            ],
+            "rows": [
+              {
+                "team_name": "Colorado Rockies",
+                "team": "COL"
+              },
+              {
+                "team_name": "Oakland Athletics",
+                "team": "OAK"
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "3 run_sql",
+      "duration_seconds": 42.39,
+      "evaluation": {
+        "id": "Q4_1998_cycles",
+        "category": "process_check",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 636 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 3 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "skip",
+            "detail": "no expected_answer specified"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "3 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "fail",
+            "detail": "1 run_sql error(s): [{'type': 'UndefinedTable', 'message': 'missing FROM-clause entry for table \"p\"\\nLINE 3:     p.gid,\\n            ^'}]"
+          }
+        ],
+        "automated_status": "fail",
+        "manual_review_required": true,
+        "overall": "fail"
+      },
+      "error": null
+    },
+    {
+      "id": "Q5_1998_yankees_record",
+      "spec": {
+        "id": "Q5_1998_yankees_record",
+        "question": "What was the 1998 Yankees' regular-season record?",
+        "category": "verifiable",
+        "expected_answer": "114-48",
+        "expected_behavior": null,
+        "must_contain": [
+          "114",
+          "48"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 1 Q5. 162 games, 114-48, .704. Substrings allow varied phrasings ('114 wins, 48 losses', '114-48')."
+      },
+      "response_text": "The 1998 New York Yankees went **114-48** in the regular season \u2014 one of the best records in American League history. That .704 winning percentage powered them to the World Series title that year, where they swept the San Diego Padres. It's widely regarded as one of the greatest teams ever assembled.",
+      "trace": [
+        {
+          "tool_name": "lookup_team",
+          "tool_input": {
+            "query": "New York Yankees"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 1,
+            "truncated": false,
+            "matches": [
+              {
+                "team": "NYA",
+                "league": "AL",
+                "city": "New York",
+                "nickname": "Yankees",
+                "first_year": 1903,
+                "last_year": 2023
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT\n  SUM(CASE WHEN wteam = 'NYA' THEN 1 ELSE 0 END) AS wins,\n  SUM(CASE WHEN lteam = 'NYA' THEN 1 ELSE 0 END) AS losses\nFROM retro.games\nWHERE (hometeam = 'NYA' OR visteam = 'NYA')\n  AND gametype = 'regular'\n  AND EXTRACT(YEAR FROM date) = 1998\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "wins",
+              "losses"
+            ],
+            "rows": [
+              {
+                "wins": 114,
+                "losses": 48
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_team, 1 run_sql",
+      "duration_seconds": 33.08,
+      "evaluation": {
+        "id": "Q5_1998_yankees_record",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 301 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '114-48' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "2 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q6_ruth_career_hrs",
+      "spec": {
+        "id": "Q6_ruth_career_hrs",
+        "question": "How many career home runs did Babe Ruth hit?",
+        "category": "verifiable",
+        "expected_answer": "714",
+        "expected_behavior": null,
+        "must_contain": [
+          "ruth",
+          "714"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 2 Layer 2 verified: 714 across 1914-1935."
+      },
+      "response_text": "**714** \u2014 the canonical number, and it checks out. Babe Ruth hit 714 regular-season home runs over his career (1914\u20131935). The extra 16 in the unfiltered count come from postseason and exhibition games.\n\nThat total stood as the all-time record for nearly four decades, until Hank Aaron passed it in April 1974.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "Ruth"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 8,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "carub101",
+                "usename": "Bob",
+                "lastname": "Caruthers",
+                "fullname": "Robert Lee Caruthers",
+                "altname": null,
+                "debut_year": 1884,
+                "last_year": 1893,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "caruu101",
+                "usename": null,
+                "lastname": "Caruthers",
+                "fullname": "Caruthers",
+                "altname": null,
+                "debut_year": null,
+                "last_year": null,
+                "bats": null,
+                "throws": null,
+                "hof": null
+              },
+              {
+                "id": "crutp101",
+                "usename": "Press",
+                "lastname": "Cruthers",
+                "fullname": "Charles Preston Cruthers",
+                "altname": null,
+                "debut_year": 1913,
+                "last_year": 1914,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "ruthb101",
+                "usename": "Babe",
+                "lastname": "Ruth",
+                "fullname": "George Herman Ruth",
+                "altname": null,
+                "debut_year": 1914,
+                "last_year": 1935,
+                "bats": "L",
+                "throws": "L",
+                "hof": "HOF"
+              },
+              {
+                "id": "ruthb001",
+                "usename": "Blake",
+                "lastname": "Rutherford",
+                "fullname": "Blake Anthony Rutherford",
+                "altname": null,
+                "debut_year": 2023,
+                "last_year": 2023,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "ruthj102",
+                "usename": "Jim",
+                "lastname": "Rutherford",
+                "fullname": "James Hollis Rutherford",
+                "altname": null,
+                "debut_year": 1910,
+                "last_year": 1910,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "ruthj101",
+                "usename": "Johnny",
+                "lastname": "Rutherford",
+                "fullname": "John William Rutherford",
+                "altname": null,
+                "debut_year": 1952,
+                "last_year": 1952,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "ruthd001",
+                "usename": "Dick",
+                "lastname": "Ruthven",
+                "fullname": "Richard David Ruthven",
+                "altname": null,
+                "debut_year": 1973,
+                "last_year": 1986,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(hr) AS career_hr\nFROM retro.plays\nWHERE batter = 'ruthb101'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "career_hr"
+            ],
+            "rows": [
+              {
+                "career_hr": 730
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(p.hr) AS career_hr\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nWHERE p.batter = 'ruthb101'\n  AND g.gametype = 'regular'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "career_hr"
+            ],
+            "rows": [
+              {
+                "career_hr": 714
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 2 run_sql",
+      "duration_seconds": 45.59,
+      "evaluation": {
+        "id": "Q6_ruth_career_hrs",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 310 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '714' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "3 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q7_aaron_career_hrs",
+      "spec": {
+        "id": "Q7_aaron_career_hrs",
+        "question": "How many career home runs did Hank Aaron hit?",
+        "category": "verifiable",
+        "expected_answer": "755",
+        "expected_behavior": null,
+        "must_contain": [
+          "aaron",
+          "755"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 2 Layer 2 verified: 755 across 1954-1976."
+      },
+      "response_text": "**755 regular-season home runs** \u2014 the canonical number, confirmed by the data.\n\nHank Aaron held the all-time MLB home run record from April 8, 1974 (when he passed Babe Ruth's 714) until Barry Bonds surpassed him in 2007. Aaron's 755 spanned a career from 1954 to 1976, split primarily between the Braves (Milwaukee and Atlanta) with his final two seasons in Milwaukee as a Brewer.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "Aaron"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 49,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "aaroh101",
+                "usename": "Hank",
+                "lastname": "Aaron",
+                "fullname": "Henry Louis Aaron",
+                "altname": null,
+                "debut_year": 1954,
+                "last_year": 1976,
+                "bats": "R",
+                "throws": "R",
+                "hof": "HOF"
+              },
+              {
+                "id": "aarot101",
+                "usename": "Tommie",
+                "lastname": "Aaron",
+                "fullname": "Tommie Lee Aaron",
+                "altname": null,
+                "debut_year": 1962,
+                "last_year": 1971,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "altha001",
+                "usename": "Aaron",
+                "lastname": "Altherr",
+                "fullname": "Aaron Samuel Altherr",
+                "altname": null,
+                "debut_year": 2014,
+                "last_year": 2019,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "ashba003",
+                "usename": "Aaron",
+                "lastname": "Ashby",
+                "fullname": "Aaron Ashby",
+                "altname": null,
+                "debut_year": 2021,
+                "last_year": 2022,
+                "bats": "R",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "barra001",
+                "usename": "Aaron",
+                "lastname": "Barrett",
+                "fullname": "Aaron James Barrett",
+                "altname": null,
+                "debut_year": 2014,
+                "last_year": 2020,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "batea001",
+                "usename": "Aaron",
+                "lastname": "Bates",
+                "fullname": "Aaron Bates",
+                "altname": null,
+                "debut_year": 2009,
+                "last_year": 2009,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "blaia001",
+                "usename": "Aaron",
+                "lastname": "Blair",
+                "fullname": "Aaron Daniel Blair",
+                "altname": null,
+                "debut_year": 2016,
+                "last_year": 2017,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "boona001",
+                "usename": "Aaron",
+                "lastname": "Boone",
+                "fullname": "Aaron John Boone",
+                "altname": null,
+                "debut_year": 1997,
+                "last_year": 2009,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "brooa001",
+                "usename": "Aaron",
+                "lastname": "Brooks",
+                "fullname": "Aaron Lee Brooks",
+                "altname": null,
+                "debut_year": 2014,
+                "last_year": 2022,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "bumma001",
+                "usename": "Aaron",
+                "lastname": "Bummer",
+                "fullname": "Aaron James Bummer",
+                "altname": null,
+                "debut_year": 2017,
+                "last_year": 2023,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "civaa001",
+                "usename": "Aaron",
+                "lastname": "Civale",
+                "fullname": "Aaron James Civale",
+                "altname": null,
+                "debut_year": 2019,
+                "last_year": 2023,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "clapa101",
+                "usename": "Aaron",
+                "lastname": "Clapp",
+                "fullname": "Aaron Bronson Clapp",
+                "altname": null,
+                "debut_year": 1879,
+                "last_year": 1879,
+                "bats": null,
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "cooka002",
+                "usename": "Aaron",
+                "lastname": "Cook",
+                "fullname": "Aaron Lane Cook",
+                "altname": null,
+                "debut_year": 2002,
+                "last_year": 2012,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "crowa001",
+                "usename": "Aaron",
+                "lastname": "Crow",
+                "fullname": "Aaron James Crow",
+                "altname": null,
+                "debut_year": 2011,
+                "last_year": 2014,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "cunna001",
+                "usename": "Aaron",
+                "lastname": "Cunningham",
+                "fullname": "Aaron Roe Ward Cunningham",
+                "altname": null,
+                "debut_year": 2008,
+                "last_year": 2012,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "fleta001",
+                "usename": "Aaron",
+                "lastname": "Fletcher",
+                "fullname": "Aaron Eugene Fletcher",
+                "altname": null,
+                "debut_year": 2020,
+                "last_year": 2022,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "fulta001",
+                "usename": "Aaron",
+                "lastname": "Fultz",
+                "fullname": "Richard Aaron Fultz",
+                "altname": null,
+                "debut_year": 2000,
+                "last_year": 2007,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "guiea001",
+                "usename": "Aaron",
+                "lastname": "Guiel",
+                "fullname": "Aaron Colin Guiel",
+                "altname": null,
+                "debut_year": 2002,
+                "last_year": 2006,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "haraa001",
+                "usename": "Aaron",
+                "lastname": "Harang",
+                "fullname": "Aaron Michael Harang",
+                "altname": null,
+                "debut_year": 2002,
+                "last_year": 2015,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "heila001",
+                "usename": "Aaron",
+                "lastname": "Heilman",
+                "fullname": "Aaron Michael Heilman",
+                "altname": null,
+                "debut_year": 2003,
+                "last_year": 2011,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "hicka001",
+                "usename": "Aaron",
+                "lastname": "Hicks",
+                "fullname": "Aaron Michael Hicks",
+                "altname": null,
+                "debut_year": 2013,
+                "last_year": 2023,
+                "bats": "B",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "hilla001",
+                "usename": "Aaron",
+                "lastname": "Hill",
+                "fullname": "Aaron Walter Hill",
+                "altname": null,
+                "debut_year": 2005,
+                "last_year": 2017,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "holba001",
+                "usename": "Aaron",
+                "lastname": "Holbert",
+                "fullname": "Aaron Keith Holbert",
+                "altname": null,
+                "debut_year": 1996,
+                "last_year": 2005,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "jonea108",
+                "usename": "Aaron",
+                "lastname": "Jones",
+                "fullname": "Aaron Jones",
+                "altname": null,
+                "debut_year": null,
+                "last_year": null,
+                "bats": null,
+                "throws": null,
+                "hof": null
+              },
+              {
+                "id": "judga001",
+                "usename": "Aaron",
+                "lastname": "Judge",
+                "fullname": "Aaron James Judge",
+                "altname": null,
+                "debut_year": 2016,
+                "last_year": 2023,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "laffa001",
+                "usename": "Aaron",
+                "lastname": "Laffey",
+                "fullname": "Aaron Steven Laffey",
+                "altname": null,
+                "debut_year": 2007,
+                "last_year": 2015,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "ledea001",
+                "usename": "Aaron",
+                "lastname": "Ledesma",
+                "fullname": "Aaron David Ledesma",
+                "altname": null,
+                "debut_year": 1995,
+                "last_year": 2000,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "loopa001",
+                "usename": "Aaron",
+                "lastname": "Looper",
+                "fullname": "Aaron Joseph Looper",
+                "altname": null,
+                "debut_year": 2003,
+                "last_year": 2003,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "loupa001",
+                "usename": "Aaron",
+                "lastname": "Loup",
+                "fullname": "Aaron Christopher Loup",
+                "altname": null,
+                "debut_year": 2012,
+                "last_year": 2023,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "milea001",
+                "usename": "Aaron",
+                "lastname": "Miles",
+                "fullname": "Aaron Wade Miles",
+                "altname": null,
+                "debut_year": 2003,
+                "last_year": 2011,
+                "bats": "B",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "myeta001",
+                "usename": "Aaron",
+                "lastname": "Myette",
+                "fullname": "Aaron Kenneth Myette",
+                "altname": null,
+                "debut_year": 1999,
+                "last_year": 2004,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "nolaa001",
+                "usename": "Aaron",
+                "lastname": "Nola",
+                "fullname": "Aaron Michael Nola",
+                "altname": null,
+                "debut_year": 2015,
+                "last_year": 2023,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "norta001",
+                "usename": "Aaron",
+                "lastname": "Northcraft",
+                "fullname": "Aaron Lee Northcraft",
+                "altname": null,
+                "debut_year": 2021,
+                "last_year": 2021,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "poina101",
+                "usename": "Aaron",
+                "lastname": "Pointer",
+                "fullname": "Aaron Elton Pointer",
+                "altname": null,
+                "debut_year": 1963,
+                "last_year": 1967,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "porea001",
+                "usename": "Aaron",
+                "lastname": "Poreda",
+                "fullname": "Aaron Andermon Poreda",
+                "altname": null,
+                "debut_year": 2009,
+                "last_year": 2014,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "rakea001",
+                "usename": "Aaron",
+                "lastname": "Rakers",
+                "fullname": "Aaron James Rakers",
+                "altname": null,
+                "debut_year": 2004,
+                "last_year": 2007,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "robia101",
+                "usename": "Aaron",
+                "lastname": "Robinson",
+                "fullname": "Aaron Andrew Robinson",
+                "altname": null,
+                "debut_year": 1943,
+                "last_year": 1951,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "rowaa001",
+                "usename": "Aaron",
+                "lastname": "Rowand",
+                "fullname": "Aaron Ryan Rowand",
+                "altname": null,
+                "debut_year": 2001,
+                "last_year": 2011,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "russa103",
+                "usename": "Aaron",
+                "lastname": "Russell",
+                "fullname": "Aaron Alexander Russell",
+                "altname": null,
+                "debut_year": null,
+                "last_year": null,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "sanca006",
+                "usename": "Aaron",
+                "lastname": "Sanchez",
+                "fullname": "Aaron Jacob Sanchez",
+                "altname": null,
+                "debut_year": 2014,
+                "last_year": 2022,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "schea001",
+                "usename": "Aaron",
+                "lastname": "Scheffer",
+                "fullname": "Aaron Alvin Marcus Scheffer",
+                "altname": null,
+                "debut_year": 1999,
+                "last_year": 1999,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "selea001",
+                "usename": "Aaron",
+                "lastname": "Sele",
+                "fullname": "Aaron Helmer Sele",
+                "altname": null,
+                "debut_year": 1993,
+                "last_year": 2007,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "slega001",
+                "usename": "Aaron",
+                "lastname": "Slegers",
+                "fullname": "Aaron Allan Slegers",
+                "altname": null,
+                "debut_year": 2017,
+                "last_year": 2021,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "smala001",
+                "usename": "Aaron",
+                "lastname": "Small",
+                "fullname": "Aaron James Small",
+                "altname": null,
+                "debut_year": 1994,
+                "last_year": 2006,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "tayla001",
+                "usename": "Aaron",
+                "lastname": "Taylor",
+                "fullname": "Aaron Wade Taylor",
+                "altname": null,
+                "debut_year": 2002,
+                "last_year": 2004,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "thoma003",
+                "usename": "Aaron",
+                "lastname": "Thompson",
+                "fullname": "Aaron Marshall Thompson",
+                "altname": null,
+                "debut_year": 2011,
+                "last_year": 2015,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "warda101",
+                "usename": "Aaron",
+                "lastname": "Ward",
+                "fullname": "Aaron Lee Ward",
+                "altname": null,
+                "debut_year": 1917,
+                "last_year": 1928,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "whita002",
+                "usename": "Aaron",
+                "lastname": "Whitefield",
+                "fullname": "Aaron James Whitefield",
+                "altname": null,
+                "debut_year": 2020,
+                "last_year": 2022,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              },
+              {
+                "id": "wilka003",
+                "usename": "Aaron",
+                "lastname": "Wilkerson",
+                "fullname": "Aaron Daniel Wilkerson",
+                "altname": null,
+                "debut_year": 2017,
+                "last_year": 2019,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(hr) AS career_hr\nFROM retro.plays\nWHERE batter = 'aaroh101'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "career_hr"
+            ],
+            "rows": [
+              {
+                "career_hr": 763
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(p.hr) AS career_hr\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nWHERE p.batter = 'aaroh101'\n  AND g.gametype = 'regular'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "career_hr"
+            ],
+            "rows": [
+              {
+                "career_hr": 755
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 2 run_sql",
+      "duration_seconds": 60.36,
+      "evaluation": {
+        "id": "Q7_aaron_career_hrs",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 382 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '755' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "3 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q8_bonds_2001_hrs",
+      "spec": {
+        "id": "Q8_bonds_2001_hrs",
+        "question": "How many home runs did Barry Bonds hit in 2001?",
+        "category": "verifiable",
+        "expected_answer": "73",
+        "expected_behavior": null,
+        "must_contain": [
+          "bonds",
+          "73"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 2 Layer 2 verified: single-season record, 73."
+      },
+      "response_text": "**73.** Barry Bonds hit 73 home runs in the 2001 regular season, setting the all-time single-season record \u2014 a mark that still stands today. It's one of the most celebrated (and debated) offensive seasons in baseball history.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "Bonds"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 2,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "bondb001",
+                "usename": "Barry",
+                "lastname": "Bonds",
+                "fullname": "Barry Lamar Bonds",
+                "altname": null,
+                "debut_year": 1986,
+                "last_year": 2007,
+                "bats": "L",
+                "throws": "L",
+                "hof": null
+              },
+              {
+                "id": "bondb101",
+                "usename": "Bobby",
+                "lastname": "Bonds",
+                "fullname": "Bobby Lee Bonds",
+                "altname": null,
+                "debut_year": 1968,
+                "last_year": 1981,
+                "bats": "R",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(hr) AS home_runs\nFROM retro.plays p\nJOIN retro.games g ON p.gid = g.gid\nWHERE p.batter = 'bondb001'\n  AND EXTRACT(YEAR FROM g.date) = 2001\n  AND g.gametype = 'regular'\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "home_runs"
+            ],
+            "rows": [
+              {
+                "home_runs": 73
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 1 run_sql",
+      "duration_seconds": 39.92,
+      "evaluation": {
+        "id": "Q8_bonds_2001_hrs",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 225 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '73' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "2 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q9_ichiro_2004_hits",
+      "spec": {
+        "id": "Q9_ichiro_2004_hits",
+        "question": "How many hits did Ichiro Suzuki get in 2004?",
+        "category": "verifiable",
+        "expected_answer": "262",
+        "expected_behavior": null,
+        "must_contain": [
+          "ichiro",
+          "262"
+        ],
+        "must_not_contain": [],
+        "verifiable": true,
+        "manual_review_required": false,
+        "notes": "Phase 2 Layer 2 verified: single-season hits record, 262."
+      },
+      "response_text": "Ichiro collected **262 hits** in 2004, setting the all-time single-season record that still stands today. He broke George Sisler's 84-year-old record of 257 hits (set in 1920) and did it in the modern 162-game schedule. It remains one of the most remarkable individual offensive seasons in baseball history.",
+      "trace": [
+        {
+          "tool_name": "lookup_player",
+          "tool_input": {
+            "name": "Ichiro"
+          },
+          "tool_output": {
+            "ok": true,
+            "match_count": 1,
+            "truncated": false,
+            "matches": [
+              {
+                "id": "suzui001",
+                "usename": "Ichiro",
+                "lastname": "Suzuki",
+                "fullname": "Ichiro Suzuki",
+                "altname": null,
+                "debut_year": 2001,
+                "last_year": 2019,
+                "bats": "L",
+                "throws": "R",
+                "hof": null
+              }
+            ]
+          }
+        },
+        {
+          "tool_name": "run_sql",
+          "tool_input": {
+            "query": "\nSELECT SUM(b_h) AS hits\nFROM retro.batting\nWHERE id = 'suzui001'\n  AND stattype = 'value'\n  AND gid IN (\n    SELECT gid FROM retro.games\n    WHERE EXTRACT(YEAR FROM date) = 2004\n      AND gametype = 'regular'\n  )\n"
+          },
+          "tool_output": {
+            "ok": true,
+            "row_count": 1,
+            "truncated": false,
+            "columns": [
+              "hits"
+            ],
+            "rows": [
+              {
+                "hits": 262
+              }
+            ]
+          }
+        }
+      ],
+      "trace_summary": "1 lookup_player, 1 run_sql",
+      "duration_seconds": 32.22,
+      "evaluation": {
+        "id": "Q9_ichiro_2004_hits",
+        "category": "verifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 307 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 2 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "skip",
+            "detail": "no must_not_contain specified"
+          },
+          {
+            "name": "expected_answer",
+            "status": "pass",
+            "detail": "expected answer '262' present"
+          },
+          {
+            "name": "decline_signal",
+            "status": "skip",
+            "detail": "only applicable to unverifiable questions"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "pass",
+            "detail": "2 DB-touching tool call(s) recorded"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": false,
+        "overall": "pass"
+      },
+      "error": null
+    },
+    {
+      "id": "Q10_most_lopsided_trade_war",
+      "spec": {
+        "id": "Q10_most_lopsided_trade_war",
+        "question": "What was the most lopsided trade in baseball history measured by WAR?",
+        "category": "unverifiable",
+        "expected_answer": null,
+        "expected_behavior": "honest_decline_with_pivot",
+        "must_contain": [
+          "war"
+        ],
+        "must_not_contain": [
+          "according to baseball-reference",
+          "according to fangraphs",
+          "baseball-reference.com",
+          "fangraphs.com",
+          "the most lopsided trade was",
+          "the answer is"
+        ],
+        "verifiable": false,
+        "manual_review_required": true,
+        "notes": "Retrosheet does not include WAR or trade records (CLAUDE.md \u00a77). Correct behavior: acknowledge WAR is out of scope, decline the lopsided-trade-by-WAR comparison, pivot to related stats the system can answer (career batting/pitching value the player produced for each franchise, etc.). Confident WAR figures or external-source citations are hallucinations. must_not_contain catches the most obvious red flags; the decline-signal check (in checks.py) verifies the agent acknowledged the limit; manual review judges pivot quality."
+      },
+      "response_text": "WAR isn't part of the Retrosheet database \u2014 it's a derived metric (Wins Above Replacement) that isn't stored here, so I can't calculate or compare WAR values for players before or after trades. Trade history itself (who was dealt for whom, on what date) also isn't in the Retrosheet schema.\n\nWhat I *can* do with this data is tell a compelling story around specific trades using counting and rate stats \u2014 things like:\n\n- **Career stats for each side of a trade** (HR, AVG, OPS components, ERA, strikeouts, wins)\n- **Stats in the years after a trade** to show who blossomed and who faded\n- **Head-to-head context** \u2014 e.g., how many times the traded players faced each other afterward\n\nIf you have a specific trade in mind \u2014 say, the Nolan Ryan\u2013for\u2013Jim Fregosi trade, the Babe Ruth sale, or any other infamous deal \u2014 I can pull the full statistical picture for both sides from the data and let the numbers speak for themselves. Just name the trade (or the players involved) and I'll dig in.",
+      "trace": [],
+      "trace_summary": "0 tool calls",
+      "duration_seconds": 16.14,
+      "evaluation": {
+        "id": "Q10_most_lopsided_trade_war",
+        "category": "unverifiable",
+        "checks": [
+          {
+            "name": "response_nonempty",
+            "status": "pass",
+            "detail": "response is 988 chars"
+          },
+          {
+            "name": "must_contain",
+            "status": "pass",
+            "detail": "all 1 substrings present"
+          },
+          {
+            "name": "must_not_contain",
+            "status": "pass",
+            "detail": "none of 6 red-flag substrings present"
+          },
+          {
+            "name": "expected_answer",
+            "status": "skip",
+            "detail": "no expected_answer specified"
+          },
+          {
+            "name": "decline_signal",
+            "status": "pass",
+            "detail": "decline-signal phrase(s) present: [\"isn't in\", \"isn't part of\"]"
+          },
+          {
+            "name": "trace_has_db_call",
+            "status": "skip",
+            "detail": "DB calls optional for unverifiable"
+          },
+          {
+            "name": "trace_no_errors",
+            "status": "pass",
+            "detail": "no run_sql errors recorded"
+          }
+        ],
+        "automated_status": "pass",
+        "manual_review_required": true,
+        "overall": "review_needed"
+      },
+      "error": null
+    }
+  ]
+}

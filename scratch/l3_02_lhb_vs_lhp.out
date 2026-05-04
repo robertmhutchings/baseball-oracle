@@ -1,0 +1,15 @@
+Top LH batters vs LHP in 1998 — minimum 150 at-bats. (Use the 50-AB version to see smaller samples.)
+   player_name   | at_bats_vs_lhp | hits_vs_lhp | batting_avg_vs_lhp | home_runs_vs_lhp | strikeouts_vs_lhp | walks_vs_lhp 
+-----------------+----------------+-------------+--------------------+------------------+-------------------+--------------
+ John Olerud     |            152 |          57 |             0.3750 |                5 |                22 |           25
+ Mo Vaughn       |            200 |          68 |             0.3400 |               14 |                61 |           17
+ Rusty Greer     |            183 |          60 |             0.3279 |                4 |                30 |           19
+ Cliff Floyd     |            154 |          50 |             0.3247 |                3 |                36 |            5
+ Fernando Vina   |            185 |          60 |             0.3243 |                0 |                15 |           12
+ Will Clark      |            153 |          49 |             0.3203 |                5 |                35 |           14
+ Rafael Palmeiro |            230 |          73 |             0.3174 |               15 |                34 |           23
+ Darryl Hamilton |            164 |          52 |             0.3171 |                2 |                26 |           17
+ Tony Gwynn      |            193 |          61 |             0.3161 |                9 |                 9 |           10
+ Ken Griffey     |            178 |          54 |             0.3034 |               21 |                33 |           17
+(10 rows)
+

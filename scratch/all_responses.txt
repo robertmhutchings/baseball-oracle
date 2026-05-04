@@ -1,0 +1,791 @@
+================================================================================
+RUN: 2026-05-02_075131    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his breakout year — the 1998 Yankees went on to win 114 regular-season games and the World Series.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q2_mcgwire_1998_hrs
+================================================================================
+**70 home runs.** That's the iconic 1998 season where McGwire broke Roger Maris's single-season record of 61, ultimately finishing with 70 — a mark that stood until Barry Bonds hit 73 in 2001. The McGwire-Sosa home run chase that year is widely credited with reigniting mainstream interest in baseball after the 1994 strike.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Great results. Here are the **best left-handed batters vs. left-handed pitchers in 1998** (min. 75 PA), sorted by OBP:
+
+| Rank | Player | PA | AVG | OBP | SLG | OPS | HR |
+|------|--------|----|-----|-----|-----|-----|----|
+| 1 | **John Olerud** | 182 | .375 | .451 | .513 | .964 | 5 |
+| 2 | **Barry Bonds** | 212 | .281 | .406 | .497 | .903 | 9 |
+| 3 | **Larry Walker** | 153 | .321 | .405 | .511 | .916 | 3 |
+| 4 | **Rusty Greer** | 202 | .337 | .386 | .451 | .837 | 4 |
+| 5 | **Mo Vaughn** | 220 | .333 | .377 | .586 | .963 | 14 |
+| 6 | **Rafael Palmeiro** | 256 | .317 | .375 | .591 | .966 | 15 |
+| 7 | **Will Clark** | 166 | .327 | .373 | .517 | .890 | 5 |
+| 8 | **Kenny Lofton** | 216 | .293 | .370 | .404 | .774 | 4 |
+| 9 | **Tony Gwynn** | 173 | .323 | .358 | .534 | .892 | 8 |
+| 10 | **Todd Helton** | 133 | .304 | .353 | .482 | .835 | 5 |
+
+### Highlights:
+
+- **John Olerud** was absolutely dominant — a .375/.451/.513 line vs. lefties is remarkable for a left-handed hitter. He completely neutralized the platoon disadvantage.
+- **Mo Vaughn** and **Rafael Palmeiro** were the power threats, combining for 29 HRs against same-handed pitching.
+- **Barry Bonds** was Bonds — even in a "weaker" platoon matchup he posted a .903 OPS with a healthy walk rate.
+- **Tony Gwynn** is a fun name here: .323/.358/.534 with 8 HRs vs. lefties — the HRs are surprising for Gwynn, suggesting he may have been feasting on a few specific pitchers.
+- Young **Todd Helton** (his rookie year) cracking this list at .304/.353/.482 is a preview of things to come.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent |
+|------|--------|------|----------|
+| May 18 | **Mike Blowers** | Oakland A's | at Chicago White Sox |
+| Jun 10 | **Dante Bichette** | Colorado Rockies | vs. Colorado (home) |
+| Jul 25 | **Neifi Perez** | Colorado Rockies | vs. Colorado (home) |
+
+A fun footnote: two of the three cycles happened at Coors Field, which makes sense given that spacious park's knack for turning doubles and triples into everyday occurrences. Neifi Perez's cycle came just six weeks after Bichette's at the same ballpark.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 New York Yankees went **114-48** in the regular season — one of the greatest records in baseball history. They finished 22 games ahead of the Red Sox in the AL East and went on to sweep the Padres in the World Series, cementing that team as one of the all-time best.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q6_ruth_career_hrs
+================================================================================
+Babe Ruth hit **714 career home runs** in the regular season — wait, let me be precise about what the data shows: the `plays` table, which is the Retrosheet play-by-play event log, returns **730**. However, this is worth a quick note:
+
+- The **official MLB-recognized total is 714**, which is what most historical records cite.
+- Retrosheet's play-by-play coverage for Ruth's early career (1914–1919) may include some games reconstructed from box scores, and the corpus includes all games in their database, which could account for minor discrepancies.
+
+The number **714** is the canonical career HR total for Babe Ruth, standing as the all-time record until Hank Aaron broke it in 1974. The slight difference in the database (730) likely reflects data encoding nuances or coverage of games not typically counted in the standard career total. The 714 figure is the one you'd cite with confidence.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q7_aaron_career_hrs
+================================================================================
+**Hank Aaron hit 755 career regular-season home runs.** That stood as the all-time MLB record from the moment he surpassed Babe Ruth's 714 on April 8, 1974, until Barry Bonds broke it in 2007. Aaron played from 1954 to 1976, spending most of his career with the Braves (Milwaukee, then Atlanta) before finishing with the Brewers.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q8_bonds_2001_hrs
+================================================================================
+**73.** Barry Bonds hit 73 home runs in the 2001 regular season, setting the all-time single-season record that still stands today. It broke his own previous record of 71 — wait, actually it broke Mark McGwire's record of 70 set in 1998. Quite a season.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q9_ichiro_2004_hits
+================================================================================
+**262 hits** — Ichiro's record-breaking 2004 season, which set the all-time MLB single-season hits record, surpassing George Sisler's 84-year-old mark of 257 (set in 1920). He did it in style, going absolutely scorching hot down the stretch to close the gap and pass Sisler in late September.
+
+================================================================================
+RUN: 2026-05-02_075131    Q: Q10_most_lopsided_trade_war
+================================================================================
+That's a fascinating question, but I have to be upfront: **WAR (Wins Above Replacement) is not available in the Retrosheet database.** Retrosheet contains play-by-play and box score data, but WAR is a composite metric calculated by external sources like Baseball-Reference or FanGraphs, and it's not part of this corpus. Trade history (which players moved where in exchange for which) is also not stored in Retrosheet.
+
+So I can't definitively answer "most lopsided by WAR" from this database alone.
+
+---
+
+**What I *can* do** is help you investigate specific trades you have in mind. For example, if you want to compare the career stats (HR, RBI, ERA, strikeouts, wins, etc.) of players on both sides of a famous trade, I can pull that from Retrosheet. Some historically infamous lopsided trades that are often cited include:
+
+- **Nolan Ryan for Jim Fregosi** (1971, Mets → Angels)
+- **Frank Robinson for Milt Pappas** (1965, Reds → Orioles)
+- **Lou Brock for Ernie Broglio** (1964, Cubs → Cardinals)
+- **Roberto Clemente going undrafted** (effectively — Pirates grabbed him in the Rule 5 draft)
+- **Bagwell for Larry Andersen** (1990, Red Sox → Astros)
+- **Randy Johnson from Expos to Mariners** (1989, for Mark Langston)
+
+Want me to pull the career or post-trade stats for both sides of any of these? That won't give you WAR, but counting stats and rate stats can tell a pretty compelling story about lopsidedness. Just name the trade (or trades) you want to dig into!
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of a strong season for the Captain — 1998 was, of course, the year the Yankees went 114-48 and won the World Series.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q2_mcgwire_1998_hrs
+================================================================================
+Mark McGwire hit **70 home runs** in 1998, setting what was then the all-time single-season record, breaking Roger Maris's mark of 61 set in 1961. It was one of the most celebrated chases in baseball history, with McGwire and Sammy Sosa (who finished with 66) captivating the country all summer long.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here are the best left-handed hitters against left-handed pitchers in 1998 (min. 60 AB), ranked by OBP:
+
+| Rank | Player | AB | AVG | OBP | SLG | HR |
+|------|--------|-----|-----|-----|-----|-----|
+| 1 | **John Olerud** | 152 | .375 | .463 | .513 | 5 |
+| 2 | **Barry Bonds** | 167 | .281 | .417 | .497 | 9 |
+| 3 | **Larry Walker** | 131 | .321 | .411 | .511 | 3 |
+| 4 | **Rusty Greer** | 175 | .337 | .402 | .451 | 4 |
+| 5 | **Andy Fox** | 96 | .333 | .390 | .427 | 0 |
+| 6 | **Mo Vaughn** | 198 | .333 | .386 | .586 | 14 |
+| 7 | **Bobby Abreu** | 103 | .320 | .386 | .408 | 0 |
+| 8 | **Will Clark** | 147 | .327 | .385 | .517 | 5 |
+| 9 | **Rafael Palmeiro** | 230 | .317 | .379 | .591 | 15 |
+| 10 | **Jim Thome** | 142 | .289 | .377 | .500 | 7 |
+
+**Highlights:**
+
+- 🏆 **John Olerud** was in a class by himself — .375/.463/.513 against lefties is absurd. He was famously one of the most disciplined contact hitters of his era, and this shows it.
+- **Barry Bonds** was Barry Bonds — his OBP (.417) was inflated by 39 walks in 167 AB against lefties. Opposing managers walked him even when their pitcher was the "advantaged" side.
+- **Mo Vaughn** and **Rafael Palmeiro** were the power leaders among the group, combining for 29 HR and slugging .586/.591 respectively — both massive power numbers in the typically tough lefty-on-lefty matchup.
+- **Ken Griffey Jr.** didn't crack the top 10 by OBP, but his **.701 SLG** (21 HR in 177 AB!) against lefties was arguably the most dominant raw power performance on the list.
+
+The conventional wisdom that lefties struggle against same-handed pitchers clearly didn't apply to these guys in 1998.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent | Venue |
+|------|--------|------|----------|-------|
+| May 18 | **Mike Blowers** | Oakland | @ Chicago White Sox | Away |
+| June 10 | **Dante Bichette** | Colorado | vs. Texas | Home |
+| July 25 | **Neifi Perez** | Colorado | vs. St. Louis | Home |
+
+A couple of fun notes:
+- Colorado hosted **two** of the three cycles in '98 — not a shock given Coors Field's run-friendly environment, which helps hitters rack up extra-base hits.
+- Bichette and Perez hit their cycles just six weeks apart at the same ballpark.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 Yankees went **114-48** in the regular season — one of the best records in baseball history. That .704 winning percentage powered them to the AL East title, and they went on to sweep through the postseason for the World Series championship. A truly legendary team.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q6_ruth_career_hrs
+================================================================================
+There it is — **714 regular-season home runs**, which is the canonical career total everyone knows.
+
+Breaking it all down:
+- **Regular season:** 714 HR
+- **World Series:** 15 HR
+- **All-Star Game:** 1 HR
+
+The 714 regular-season figure stood as the all-time MLB record for nearly four decades until Hank Aaron broke it in 1974. Ruth's 15 World Series homers are also the most in postseason history.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q7_aaron_career_hrs
+================================================================================
+Hank Aaron hit **755 career regular-season home runs** — a record that stood for 33 years until Barry Bonds surpassed it in 2007. Aaron slugged his way to that total over 23 seasons (1954–1976), with remarkable consistency rather than a single peak — he never hit more than 47 in a season, but he just never stopped hitting them.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q8_bonds_2001_hrs
+================================================================================
+Barry Bonds hit **73 home runs** in 2001 — the all-time single-season record. He shattered Mark McGwire's previous record of 70 (set in 1998), and that mark still stands today.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q9_ichiro_2004_hits
+================================================================================
+**262 hits** — Ichiro's record-breaking 2004 season, which surpassed George Sisler's 84-year-old single-season hits record of 257 (set in 1920). It remains the MLB record for hits in a single season to this day.
+
+================================================================================
+RUN: 2026-05-02_081224    Q: Q10_most_lopsided_trade_war
+================================================================================
+That's a fantastic question, but I have to be upfront: **WAR (Wins Above Replacement) is not available in the Retrosheet database.** Retrosheet contains play-by-play and box score data, but WAR is a calculated metric from Baseball Reference (rWAR) or FanGraphs (fWAR) that isn't part of this corpus. Trade history (who was swapped for whom) also isn't tracked in Retrosheet.
+
+So I genuinely can't answer this one from the data I have access to — it would require either a WAR database or a trades database, neither of which is here.
+
+---
+
+**What I *can* offer from training knowledge (for framing, not hard numbers):**
+
+The most commonly cited lopsided trades in baseball history include:
+
+- **Nolan Ryan for Jim Fregosi (1971, Mets → Angels)** — Ryan went on to become arguably the greatest strikeout pitcher ever; Fregosi lasted two forgettable seasons in New York.
+- **Lou Brock for Ernie Broglio (1964, Cubs → Cardinals)** — Brock became a Hall of Fame base-stealer; Broglio won 7 games the rest of his career.
+- **Frank Robinson (1966, Reds → Orioles)** — dealt as an "old 30," Robinson promptly won the Triple Crown and a World Series MVP.
+- **Jeff Bagwell for Larry Andersen (1990, Red Sox → Astros)** — a rental reliever for a Hall of Fame first baseman.
+
+For precise WAR comparisons, **Baseball Reference's Trade Tracker** (baseball-reference.com) is the right tool — they've done exactly this analysis with their rWAR data.
+
+Want me to dig into any of these specific trades using what *is* in Retrosheet — like career stat comparisons for the players involved?
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was right in the middle of the Yankees' legendary 114-win regular season, so he had plenty of company in that lineup.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q2_mcgwire_1998_hrs
+================================================================================
+Mark McGwire hit **70 home runs** in 1998 — the record-breaking season that captivated the baseball world. That total broke Roger Maris's long-standing single-season record of 61, set in 1961, in a thrilling race with Sammy Sosa, who finished with 66 that same year.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here are the best left-handed hitters against left-handed pitching in 1998 (minimum 80 AB), sorted by OBP:
+
+| Player | AB | AVG | OBP | SLG | HR | BB |
+|---|---|---|---|---|---|---|
+| **John Olerud** | 152 | .375 | .451 | .513 | 5 | 25 |
+| **Barry Bonds** | 167 | .281 | .415 | .497 | 9 | 41 |
+| **Larry Walker** | 131 | .321 | .405 | .511 | 3 | 20 |
+| **Rusty Greer** | 175 | .337 | .386 | .451 | 4 | 19 |
+| **Rafael Palmeiro** | 230 | .317 | .379 | .591 | 15 | 24 |
+| **Mo Vaughn** | 198 | .333 | .377 | .586 | 14 | 17 |
+| **Darryl Hamilton** | 164 | .317 | .375 | .421 | 2 | 17 |
+| **Will Clark** | 147 | .327 | .373 | .517 | 5 | 14 |
+| **Kenny Lofton** | 188 | .293 | .370 | .404 | 4 | 25 |
+| **Tony Gwynn** | 161 | .323 | .370 | .534 | 8 | 12 |
+| **Ken Griffey Jr.** | 177 | .299 | .350 | .701 | 21 | 16 |
+
+A few highlights:
+
+- **John Olerud** was the clear king of this split — a .375/.451/.513 line vs. lefties is absurd. He was simply unafraid of same-handed pitching.
+- **Barry Bonds** used his elite plate discipline to post a .415 OBP despite a modest .281 average — 41 walks in 212 PA against southpaws is remarkable.
+- **Ken Griffey Jr.** leads the power column by a mile: 21 HR and a .701 SLG in 177 AB vs. lefties is devastating. Even when he didn't walk (only 16 BB), he was wrecking them.
+- **Rafael Palmeiro** and **Mo Vaughn** were also big power threats, both slugging near .590.
+- **Tony Gwynn** — true to form — posted a .323 average with only 6 strikeouts in 173 PA. That K rate is almost comical.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent |
+|------|--------|------|----------|
+| May 18 | **Mike Blowers** | Oakland Athletics | @ Chicago White Sox |
+| June 10 | **Dante Bichette** | Colorado Rockies | vs. (at Coors Field) |
+| July 25 | **Neifi Perez** | Colorado Rockies | vs. (at Coors Field) |
+
+A fun footnote: two of the three cycles happened at Coors Field, which isn't too surprising — the high altitude and spacious dimensions make it one of the most cycle-friendly parks in baseball. Neifi Perez's cycle came just six weeks after his Rockies teammate Dante Bichette's.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 New York Yankees went **114-48** in the regular season — a .704 winning percentage and one of the greatest single-season records in MLB history. That club, managed by Joe Torre, went on to sweep the Padres in the World Series to cap one of the most dominant seasons ever.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q6_ruth_career_hrs
+================================================================================
+Babe Ruth hit **714 career regular-season home runs** — the number that stood as the all-time record from 1935 until Hank Aaron broke it in 1974. Ruth's career spanned 1914–1935, and that total includes his time as both a pitcher (when he rarely batted) and his dominant run as a full-time slugger with the Yankees.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q7_aaron_career_hrs
+================================================================================
+Hank Aaron hit **755 career regular-season home runs** — the record he held as the all-time MLB leader from 1974 until Barry Bonds surpassed him in 2007. He played from 1954 to 1976, spending the bulk of his career with the Braves (Milwaukee and then Atlanta) before finishing with the Milwaukee Brewers.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q8_bonds_2001_hrs
+================================================================================
+Barry Bonds hit **73 home runs** in 2001 — the all-time single-season record. He shattered Mark McGwire's previous record of 70 (set in 1998) by three, doing it in a season where he also posted a .863 slugging percentage, another all-time record.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q9_ichiro_2004_hits
+================================================================================
+Ichiro had **262 hits** in 2004 — the all-time single-season record, surpassing George Sisler's 257 set back in 1920. It's one of the most iconic individual season achievements in baseball history.
+
+================================================================================
+RUN: 2026-05-02_082219    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet dataset, so I can't compute it directly. But I can dig into the adjacent stats that tell the story — career numbers, peak seasons, the before-and-after splits for both sides of any specific trade you have in mind.
+
+A few approaches I *can* take from Retrosheet data:
+
+1. **Pick a famous lopsided trade** (e.g., Nolan Ryan for Jim Fregosi, Frank Robinson for Milt Pappas, Jeff Bagwell for Larry Andersen) and pull the career/post-trade counting and rate stats for both sides — hits, HR, RBI, ERA, K, OPS-equivalent — so you can see the gap clearly in the numbers.
+
+2. **Look at a player's post-trade production** vs. what the receiving team gave up — season-by-season breakdowns, All-Star appearances (via `players_team_year`), or peak-season comparisons.
+
+3. **Identify players who had dramatically better careers after being traded** by comparing their stats in two eras/team affiliations.
+
+Which trade (or player) would you like me to dig into? Or if you want, I can pull the post-trade numbers for a few of the most *famously* lopsided deals and let the stats speak for themselves.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his strong 1998 season with the Yankees, who went on to win the World Series that year.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q2_mcgwire_1998_hrs
+================================================================================
+**70 home runs.** That's the legendary 1998 season where McGwire broke Roger Maris's single-season record of 61, which had stood since 1961. It was one of the most-watched home run chases in baseball history, with Sammy Sosa right on his heels finishing with 66.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here are the best lefty-on-lefty hitters from 1998 (min. 50 AB), ranked by OPS:
+
+| Player | AB | AVG | OBP | SLG | OPS | HR |
+|---|---|---|---|---|---|---|
+| **Ken Griffey Jr.** | 177 | .299 | .350 | .701 | 1.051 | 21 |
+| **John Olerud** | 152 | .375 | .451 | .513 | .964 | 5 |
+| **Barry Bonds** | 167 | .281 | .406 | .497 | .903 | 9 |
+| **Mo Vaughn** | 198 | .333 | .377 | .586 | .963 | 14 |
+| **Larry Walker** | 131 | .321 | .405 | .511 | .916 | 3 |
+| **Rafael Palmeiro** | 230 | .317 | .375 | .591 | .966 | 15 |
+| **Tony Gwynn** | 161 | .323 | .358 | .534 | .892 | 8 |
+| **Will Clark** | 147 | .327 | .373 | .517 | .890 | 5 |
+| **Rusty Greer** | 175 | .337 | .386 | .451 | .837 | 4 |
+
+A few standouts:
+
+- **Griffey** absolutely mashed lefties — a .701 SLG and 21 HR against them is extraordinary, especially given lefty-on-lefty is supposed to favor the pitcher.
+- **John Olerud** had the best AVG/OBP combo in this group (.375/.451), though with little power. Classic Olerud — he just made contact against everybody.
+- **Bonds** drew 39 walks in just 167 AB against lefties, showing pitchers were already handling him carefully.
+- **Mo Vaughn** and **Palmeiro** were both big-time lefty mashers with excellent OPS well north of .900.
+
+The conventional wisdom about lefties struggling against same-handed pitching clearly didn't apply to this crew. Griffey in particular was one of the few hitters who was genuinely dangerous regardless of the handedness matchup.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent (park) |
+|------|--------|------|-----------------|
+| May 18 | **Mike Blowers** | Oakland Athletics | @ Chicago White Sox |
+| June 10 | **Dante Bichette** | Colorado Rockies | vs. Colorado (home) |
+| July 25 | **Neifi Perez** | Colorado Rockies | vs. Colorado (home) |
+
+A fun footnote: two of the three cycles happened at Coors Field, which makes perfect sense — the thin mile-high air that turns lazy fly balls into homers and gaps into triples is cycle-friendly territory. Bichette and Perez both pulled it off in Denver within about six weeks of each other.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 New York Yankees went **114-48** in the regular season — one of the best records in American League history. That .704 winning percentage powered them to the World Series title that year, where they swept the San Diego Padres. It's widely regarded as one of the greatest teams ever assembled.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q6_ruth_career_hrs
+================================================================================
+**714** — the canonical number, and it checks out. Babe Ruth hit 714 regular-season home runs over his career (1914–1935). The extra 16 in the unfiltered count come from postseason and exhibition games.
+
+That total stood as the all-time record for nearly four decades, until Hank Aaron passed it in April 1974.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q7_aaron_career_hrs
+================================================================================
+**755 regular-season home runs** — the canonical number, confirmed by the data.
+
+Hank Aaron held the all-time MLB home run record from April 8, 1974 (when he passed Babe Ruth's 714) until Barry Bonds surpassed him in 2007. Aaron's 755 spanned a career from 1954 to 1976, split primarily between the Braves (Milwaukee and Atlanta) with his final two seasons in Milwaukee as a Brewer.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q8_bonds_2001_hrs
+================================================================================
+**73.** Barry Bonds hit 73 home runs in the 2001 regular season, setting the all-time single-season record — a mark that still stands today. It's one of the most celebrated (and debated) offensive seasons in baseball history.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q9_ichiro_2004_hits
+================================================================================
+Ichiro collected **262 hits** in 2004, setting the all-time single-season record that still stands today. He broke George Sisler's 84-year-old record of 257 hits (set in 1920) and did it in the modern 162-game schedule. It remains one of the most remarkable individual offensive seasons in baseball history.
+
+================================================================================
+RUN: 2026-05-02_083226    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet database — it's a derived metric (Wins Above Replacement) that isn't stored here, so I can't calculate or compare WAR values for players before or after trades. Trade history itself (who was dealt for whom, on what date) also isn't in the Retrosheet schema.
+
+What I *can* do with this data is tell a compelling story around specific trades using counting and rate stats — things like:
+
+- **Career stats for each side of a trade** (HR, AVG, OPS components, ERA, strikeouts, wins)
+- **Stats in the years after a trade** to show who blossomed and who faded
+- **Head-to-head context** — e.g., how many times the traded players faced each other afterward
+
+If you have a specific trade in mind — say, the Nolan Ryan–for–Jim Fregosi trade, the Babe Ruth sale, or any other infamous deal — I can pull the full statistical picture for both sides from the data and let the numbers speak for themselves. Just name the trade (or the players involved) and I'll dig in.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his breakout campaign that year — he ended the 1998 season with 19 HRs, a career-high at that point, as the Yankees won 114 games and the World Series.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q2_mcgwire_1998_hrs
+================================================================================
+**70 home runs.** That's the iconic 1998 record-breaking season, where McGwire shattered Roger Maris's single-season mark of 61. He and Sammy Sosa engaged in one of the most celebrated home run races in baseball history, with Sosa finishing at 66. McGwire's 70 still stands as one of the most famous single-season totals in the game.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Good data now — walks are properly counted. Here are the best left-handed hitters vs. left-handed pitchers in 1998 (min. 100 PA), ranked by OPS:
+
+---
+
+### Best LHB vs. LHP — 1998 (min. 100 PA, sorted by OPS)
+
+| Player | PA | AVG | OBP | SLG | OPS | HR | BB |
+|---|---|---|---|---|---|---|---|
+| **John Olerud** | 182 | .375 | .451 | .513 | **.964** | 5 | 25 |
+| **Barry Bonds** | 212 | .281 | .406 | .497 | **.903** | 9 | 39 |
+| **Larry Walker** | 153 | .321 | .405 | .511 | **.916** | 3 | 20 |
+| **Mo Vaughn** | 220 | .333 | .377 | .586 | **.963** | 14 | 17 |
+| **Rafael Palmeiro** | 256 | .317 | .375 | .591 | **.966** | 15 | 23 |
+| **Rusty Greer** | 202 | .337 | .386 | .451 | **.837** | 4 | 19 |
+| **Tony Gwynn** | 173 | .323 | .358 | .534 | **.892** | 8 | 10 |
+| **Ken Griffey Jr.** | 197 | .299 | .350 | .701 | **1.051** | 21 | 16 |
+| **Will Clark** | 166 | .327 | .373 | .517 | **.890** | 5 | 14 |
+| **Jim Thome** | 166 | .289 | .367 | .500 | **.867** | 7 | 20 |
+
+---
+
+### Highlights
+
+- **Ken Griffey Jr.** is the clear standout by OPS — a jaw-dropping **1.051** driven by 21 home runs in just 177 AB against lefties. His .701 SLG is in a different zip code from everyone else.
+- **John Olerud** was the best pure contact hitter in this group at **.375 AVG**, and his .451 OBP reflects a strong eye (25 BB in 182 PA).
+- **Rafael Palmeiro** quietly mashed lefties with 15 HR and .966 OPS over a robust 256 PA sample.
+- **Barry Bonds** did what Bonds did — 39 walks in 212 PA vs. LHP. Even lefty pitchers were afraid of him.
+- The conventional wisdom is that lefties struggle against same-handed pitching, but this group — almost all elite hitters — clearly didn't get the memo.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent |
+|------|--------|------|----------|
+| May 18 | **Mike Blowers** | Oakland Athletics | @ Chicago White Sox |
+| June 10 | **Dante Bichette** | Colorado Rockies | vs. Texas Rangers |
+| July 25 | **Neifi Perez** | Colorado Rockies | vs. St. Louis Cardinals |
+
+A fun note: two of the three cycles happened at Coors Field in Colorado — Dante Bichette and Neifi Perez pulled it off within six weeks of each other at home. That's the kind of thing that happens when you play half your games in Denver.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 New York Yankees went **114-48** in the regular season — one of the best records in MLB history. That .704 winning percentage powered them through the postseason to a World Series title, with the team widely regarded as one of the greatest ever assembled.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q6_ruth_career_hrs
+================================================================================
+Babe Ruth hit **714 regular-season home runs** in his career (1914–1935) — the canonical number that stood as the all-time record for nearly 40 years until Hank Aaron broke it in 1974. He added 15 more in World Series and other postseason play, bringing his total across all game types to 729 in the Retrosheet data.
+
+The 714 figure is one of the most famous numbers in baseball history, and the data confirms it exactly.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q7_aaron_career_hrs
+================================================================================
+**755 home runs** — the canonical figure for Hank Aaron's regular-season career. He held the all-time MLB record from April 8, 1974 (when he surpassed Babe Ruth's 714) until Barry Bonds broke it in 2007. Aaron played from 1954 to 1976, spending the bulk of his career with the Milwaukee/Atlanta Braves before finishing with the Milwaukee Brewers.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q8_bonds_2001_hrs
+================================================================================
+Barry Bonds hit **73 home runs** in the 2001 regular season, setting the all-time single-season record that still stands today. It was one of the most dominant offensive seasons in baseball history — he did it in just 476 at-bats, an absurd HR rate of roughly one every 6.5 ABs.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q9_ichiro_2004_hits
+================================================================================
+Ichiro collected **262 hits** in 2004 — the all-time single-season record, surpassing George Sisler's mark of 257 set in 1920. It remains the record to this day.
+
+================================================================================
+RUN: 2026-05-02_084228    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet database — it's a derived metric (Wins Above Replacement) that requires comprehensive play-value modeling not included in this corpus. So I can't directly answer "most lopsided by WAR."
+
+What I **can** do is help you investigate specific trades using counting and rate stats from Retrosheet. For any trade you're curious about, I can pull:
+
+- **Career or post-trade stats** for each player involved (HR, RBI, AVG, OBP, SLG, games played, etc.)
+- **Season-by-season production** after the trade date for each side
+- **Pitching lines** (ERA-equivalent via ER/IP, strikeouts, wins) if pitchers were involved
+
+Some historically notorious lopsided trades that are commonly discussed:
+
+- **Babe Ruth** (Red Sox → Yankees, 1920)
+- **Nolan Ryan** (Mets → Angels, 1971)
+- **Frank Robinson** (Reds → Orioles, 1966)
+- **Lou Brock** (Cubs → Cardinals, 1964)
+- **Jeff Bagwell** (Red Sox → Astros, 1990)
+
+If you name a specific trade, I can run the numbers on what each side produced **after** the deal and tell you a pretty clear story about who won — even without WAR. Want me to dig into any of those, or a different trade entirely?
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his strong 1998 season with the Yankees, who went on to win the World Series that year.
+
+Want a breakdown of those homers by date or opponent?
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q2_mcgwire_1998_hrs
+================================================================================
+**70 home runs.** McGwire's 1998 season was one of the most celebrated in baseball history — he famously broke Roger Maris's single-season record of 61, finishing with 70 to edge out Sammy Sosa (who hit 66 that year) in one of the great home run races.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here's a fun leaderboard — these are lefty batters who absolutely *punished* left-handed pitching in 1998 (min. 50 PA vs. LHP):
+
+---
+
+### Best LHB vs. LHP, 1998 (min. 50 PA)
+
+| Player | PA | AVG | OBP | SLG | HR |
+|---|---|---|---|---|---|
+| **John Olerud** | 182 | **.375** | **.451** | .513 | 5 |
+| Rusty Greer | 202 | .337 | .386 | .451 | 4 |
+| Mo Vaughn | 220 | .333 | .377 | **.586** | 14 |
+| Andy Fox | 109 | .333 | .376 | .427 | 0 |
+| Will Clark | 166 | .327 | .373 | .517 | 5 |
+| Cliff Floyd | 161 | .325 | .342 | .494 | 3 |
+| Fernando Viña | 210 | .324 | .343 | .405 | 0 |
+| Tony Gwynn | 173 | .323 | .358 | .534 | 8 |
+| Larry Walker | 153 | .321 | **.405** | .511 | 3 |
+| Rafael Palmeiro | 256 | .317 | .375 | .591 | 15 |
+| **Ken Griffey Jr.** | 197 | .299 | .350 | **.701** | 21 |
+
+---
+
+**A few highlights:**
+
+- **John Olerud** was a phenomenon here — .375/.451/.513 is an absurd line. He was famous for being a better hitter against same-handed pitching, which is the reverse of the normal platoon split.
+- **Ken Griffey Jr.** wasn't at the top in average, but his .701 slugging with 21 HRs in 197 PA vs. LHP was devastating. That's nearly one HR every 9.4 PA.
+- **Rafael Palmeiro** had the most PA (256) and was remarkably consistent — 15 HR with a .591 SLG.
+- **Tony Gwynn** slugged .534 against lefties with 8 HR — way above his typical profile, showing lefties couldn't just throw him anything.
+
+**For OPS**, the top three shake out as: Griffey (1.051), Olerud (0.964), Palmeiro (0.966) — all elite, very different profiles.
+
+Want me to dig deeper on anyone here, or look at a lower PA threshold to catch part-timers who really raked?
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent |
+|------|--------|------|----------|
+| May 18 | **Mike Blowers** | Oakland A's | Chicago White Sox |
+| June 10 | **Dante Bichette** | Colorado Rockies | Texas Rangers |
+| July 25 | **Neifi Perez** | Colorado Rockies | St. Louis Cardinals |
+
+A couple of fun notes: two of the three happened at Coors Field in Colorado, and Neifi Perez was just 24 years old when he did it. Blowers' cycle came against the White Sox in Chicago.
+
+Want me to dig into any of the individual games — like the exact hit sequence or inning breakdowns?
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 Yankees went **114-48** in the regular season — one of the best records in AL history. That .704 winning percentage powered them to the World Series title that year, where they swept the Padres. A genuinely legendary team.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q6_ruth_career_hrs
+================================================================================
+There it is — the canonical **714 regular-season home runs**, confirmed from the data. Here's the full breakdown:
+
+| Game Type | HRs |
+|---|---|
+| Regular Season | **714** |
+| World Series | 15 |
+| All-Star | 1 |
+| **Total** | **730** |
+
+The 714 regular-season figure stood as the all-time MLB record for nearly four decades until Hank Aaron broke it in 1974. Ruth also clubbed 15 World Series homers, which is itself a record that still stands today.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q7_aaron_career_hrs
+================================================================================
+**755 home runs** — the number Hank Aaron carried into the record books. He held the all-time MLB career home run record from April 8, 1974 (when he passed Babe Ruth's 714) until Barry Bonds surpassed him in 2007. Aaron hit those 755 over a 23-year career from 1954 to 1976, almost entirely with the Braves (Milwaukee and Atlanta) plus a final two seasons back in Milwaukee with the Brewers.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q8_bonds_2001_hrs
+================================================================================
+**73.** Barry Bonds hit 73 home runs in the 2001 regular season, setting the all-time single-season record. It's still the mark to beat today.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q9_ichiro_2004_hits
+================================================================================
+Ichiro had **262 hits** in 2004 — the all-time single-season record, breaking George Sisler's mark of 257 set in 1920. It remains one of the most celebrated offensive milestones in baseball history.
+
+================================================================================
+RUN: 2026-05-02_090331    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet dataset — it's a calculated metric (Wins Above Replacement) that isn't stored in the play-by-play corpus I query. So I can't directly rank trades by WAR differential.
+
+What I *can* do is pull career or post-trade counting and rate stats for both sides of any specific trade you're curious about. That won't give you WAR, but games played, OPS, ERA, wins, etc. can tell a pretty clear story about who got the better end of a deal.
+
+A few trades that are historically famous for being one-sided that I could dig into:
+
+- **Nolan Ryan for Jim Fregosi** (Mets → Angels, 1971)
+- **Frank Robinson for Mitch Pappas et al.** (Reds → Orioles, 1965)
+- **Lou Brock for Ernie Broglio** (Cubs → Cardinals, 1964)
+- **Jeff Bagwell for Larry Andersen** (Red Sox → Astros, 1990)
+- **Roberto Clemente passing through waivers** to the Pirates from the Dodgers (1954)
+
+Want me to pull post-trade stats for one (or all) of these, or is there a specific trade you had in mind?
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his strong 1998 season, which was one of the best of his career as the Yankees went on to win 114 regular-season games and the World Series that year.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q2_mcgwire_1998_hrs
+================================================================================
+**70.** Mark McGwire hit 70 home runs in the 1998 regular season, breaking Roger Maris's single-season record of 61 that had stood since 1961. It was one of the most celebrated chases in baseball history, with McGwire and Sammy Sosa trading the lead back and forth all summer.
+
+Want me to break it down further — by month, home vs. away, or against specific opponents?
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here's the 1998 lefty-vs-lefty leaderboard (min. 50 PA), ranked by OPS:
+
+| Rank | Player | PA | AVG | OBP | SLG | OPS | HR |
+|------|--------|----|-----|-----|-----|-----|----|
+| 1 | **Ken Griffey Jr.** | 197 | .299 | .360 | .701 | 1.061 | 21 |
+| 2 | **Mo Vaughn** | 220 | .333 | .400 | .586 | .986 | 14 |
+| 3 | **John Olerud** | 182 | .375 | .467 | .513 | .980 | 5 |
+| 4 | **Rafael Palmeiro** | 256 | .317 | .387 | .591 | .978 | 15 |
+| 5 | **Larry Walker** | 153 | .321 | .412 | .511 | .923 | 3 |
+| 6 | **Barry Bonds** | 212 | .281 | .420 | .497 | .917 | 9 |
+| 7 | **Will Clark** | 166 | .327 | .386 | .517 | .903 | 5 |
+| 8 | **Matt Lawton** | 158 | .275 | .392 | .504 | .896 | 6 |
+| 9 | **Tony Gwynn** | 173 | .323 | .358 | .534 | .892 | 8 |
+| 10 | **Jim Thome** | 166 | .289 | .386 | .500 | .886 | 7 |
+
+### Highlights
+
+- **Griffey** sits alone at the top with a monster .701 SLG against lefties — 21 home runs in just 197 PA is absurd, one every 9.4 PA. He completely obliterated the platoon disadvantage.
+- **Olerud** is the contact/OBP standout: .375/.467 with almost no strikeouts (22 in 182 PA) — a nightmare to pitch to even if you had the "platoon edge."
+- **Bonds** takes the patient approach — 39 walks in 212 PA (.420 OBP) while keeping his average alive at .281.
+- **Palmeiro** had the most PA of anyone in the top 5 (256), meaning opposing managers weren't shying away from lefties even against him — and he punished them anyway.
+- **Tony Gwynn** at age 38 still hit .323 against lefties with only 6 strikeouts in 173 PA — vintage Gwynn contact wizardry.
+
+The conventional wisdom about the lefty-lefty platoon split clearly didn't apply to most of these guys in '98. Want me to flip it and look at which lefty batters were most *vulnerable* to lefty pitchers that year, or dig into a specific player's breakdown?
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Batting Team | Opponent |
+|------|--------|-------------|----------|
+| May 18 | **Mike Blowers** | Oakland | at Chicago (AL) |
+| June 10 | **Dante Bichette** | Colorado | vs. Texas |
+| July 25 | **Neifi Perez** | Colorado | vs. St. Louis |
+
+Notable that two of the three happened at Coors Field — not a total surprise given the offensive environment there in the late '90s. Bichette and Perez were both Rockies, and Colorado was a cycle machine in that era. Blowers got his with Oakland at Comiskey.
+
+Want me to dig into the details of any of these games — the full box score, how many RBI they drove in, etc.?
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 Yankees went **114-48** in the regular season — one of the greatest records in baseball history. That .704 winning percentage held up as the best in the American League for decades. They then went on to win the World Series that year, finishing the postseason 11-2 for a combined 125 wins on the season.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q6_ruth_career_hrs
+================================================================================
+**714 regular-season home runs** — the canonical number that stood as the all-time record until Hank Aaron broke it in 1974.
+
+The full play-by-play log (including postseason) shows **730 total**, meaning Ruth hit 16 home runs in World Series play, which checks out across his 10 Fall Classic appearances.
+
+His career spanned 1914–1935, primarily with the Yankees, and the 714 figure is the one enshrined in baseball history.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q7_aaron_career_hrs
+================================================================================
+Hank Aaron hit **755 regular-season home runs** over his career (1954–1976) — the all-time record until Barry Bonds surpassed it in 2007. The slightly higher total of 763 includes postseason play.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q8_bonds_2001_hrs
+================================================================================
+**73.** Barry Bonds hit 73 home runs in the 2001 regular season, setting the all-time single-season record that still stands today.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q9_ichiro_2004_hits
+================================================================================
+**262 hits** — Ichiro's legendary 2004 season, which set the all-time single-season record for hits, surpassing George Sisler's 257 from 1920. That's still the record today.
+
+================================================================================
+RUN: 2026-05-03_055901    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet database — it's a derived metric (Wins Above Replacement) that isn't stored here. I can't answer the WAR-based version of this question.
+
+What I *can* do is look at specific trades from a counting/rate-stats angle. For example, if you name a trade you're curious about — say, the Nolan Ryan–for–Jim Fregosi deal, or the Frank Robinson trade, or any other — I can pull career stats for both sides of the deal, covering the years *after* the trade was made, and give you a clear picture of who outproduced whom. Counting stats (HR, RBI, hits, ERA, strikeouts) and rate stats (AVG, OBP, SLG, ERA+) won't give you a single WAR number, but they can absolutely tell a compelling story about lopsidedness.
+
+Want to pick a trade and dig in?
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q1_jeter_hr_may_1998
+================================================================================
+Derek Jeter hit **4 home runs** in May 1998. That was part of his strong '98 season — one of the best years of his career, when the Yankees went on to win 114 regular-season games and the World Series.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q2_mcgwire_1998_hrs
+================================================================================
+Mark McGwire hit **70 home runs** in 1998, setting what was then the all-time single-season record. It was one of the most captivating chases in baseball history, with McGwire and Sammy Sosa neck-and-neck for much of the season. McGwire ultimately broke Roger Maris's 37-year-old record of 61 and finished with 70 to Sosa's 66.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q3_lhb_vs_lhp_1998
+================================================================================
+Here are the best lefty-on-lefty hitters in 1998 (min. 100 PA), sorted by OBP:
+
+| Rank | Player | PA | AVG | OBP | SLG | HR |
+|------|--------|----|-----|-----|-----|----|
+| 1 | **John Olerud** | 182 | .375 | .451 | .513 | 5 |
+| 2 | **Barry Bonds** | 212 | .281 | .406 | .497 | 9 |
+| 3 | **Larry Walker** | 153 | .321 | .405 | .511 | 3 |
+| 4 | **Rusty Greer** | 202 | .337 | .386 | .451 | 4 |
+| 5 | **Mo Vaughn** | 220 | .333 | .377 | .586 | 14 |
+| 6 | **Rafael Palmeiro** | 256 | .317 | .375 | .591 | 15 |
+| 7 | **Will Clark** | 166 | .327 | .373 | .517 | 5 |
+| 8 | **Kenny Lofton** | 216 | .293 | .370 | .404 | 4 |
+| 9 | **Jim Thome** | 166 | .289 | .367 | .500 | 7 |
+| 10 | **Tony Gwynn** | 173 | .323 | .358 | .534 | 8 |
+
+**John Olerud** stands out — a .375/.451/.513 line against lefties is remarkable. He was one of the premier same-hand hitters of his era. **Mo Vaughn** and **Rafael Palmeiro** led the group in raw power (14 and 15 HR respectively against lefties). And **Tony Gwynn** with just 6 strikeouts in 173 PA against lefties is pure vintage Gwynn.
+
+A few names worth noting: **Todd Helton** just making the list in what was essentially his rookie year, and **Bobby Abreu** with zero strikeouts-to-concern ratio (30 K in 120 PA was his weak spot here).
+
+Want me to sort by SLG or OPS instead, or lower the PA threshold to catch more players?
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q4_1998_cycles
+================================================================================
+Three players hit for the cycle in 1998:
+
+| Date | Player | Team | Opponent | Park |
+|------|--------|------|----------|------|
+| May 18 | **Mike Blowers** | Oakland (A's) | at Chicago (White Sox) | Comiskey Park |
+| June 10 | **Dante Bichette** | Colorado (Rockies) | vs. Texas (Rangers) | Coors Field |
+| July 25 | **Neifi Perez** | Colorado (Rockies) | vs. St. Louis (Cardinals) | Coors Field |
+
+A couple of fun notes: two of the three happened at **Coors Field**, which makes sense — that spacious, high-altitude park is tailor-made for triples and extra-base hits. And Blowers hit his cycle on the road, going single/double/triple/HR against the White Sox.
+
+Want me to dig into the box scores for any of these games — like the order the hits came, or the final scores?
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q5_1998_yankees_record
+================================================================================
+The 1998 Yankees went **114-48** in the regular season — one of the best records in AL history. That .704 winning percentage powered what is widely considered one of the greatest teams ever assembled, capping the season with a World Series sweep of the Padres.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q6_ruth_career_hrs
+================================================================================
+**714.** Babe Ruth hit 714 regular-season home runs over his career (1914–1935) — a record that stood for nearly four decades until Hank Aaron broke it in 1974.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q7_aaron_career_hrs
+================================================================================
+Hank Aaron hit **755 career regular-season home runs** — the record he held from April 8, 1974 (when he passed Babe Ruth's 714) until Barry Bonds surpassed him in 2007.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q8_bonds_2001_hrs
+================================================================================
+**73.** Barry Bonds hit 73 home runs in the 2001 regular season, breaking Mark McGwire's single-season record of 70 set in 1998 — still the all-time record today.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q9_ichiro_2004_hits
+================================================================================
+Ichiro had **262 hits** in 2004 — the all-time single-season record, breaking George Sisler's mark of 257 set in 1920. It's one of the most celebrated individual seasons in baseball history.
+
+================================================================================
+RUN: 2026-05-03_064708    Q: Q10_most_lopsided_trade_war
+================================================================================
+WAR isn't part of the Retrosheet database — it's a derived metric that requires defensive value, park factors, and run-environment adjustments that aren't in the play-by-play corpus. I can't compute or look up WAR here.
+
+What I *can* do is tell a pretty compelling story about lopsided trades using counting and rate stats. A few approaches that work well from the data:
+
+**Option 1 — Post-trade career production (HR, RBI, hits, ERA, etc.)**
+Pick a famous trade (or let me suggest candidates) and I'll pull what each player did *after* the deal was made — for their new teams and beyond.
+
+**Option 2 — The "what did the trading team get back" angle**
+Compare the receiving side: e.g., Babe Ruth for cash, Nolan Ryan for Jim Fregosi, the Frank Robinson trade. I can pull career post-trade stats for everyone involved.
+
+**Option 3 — Suggest the usual suspects**
+Some historically notorious trades by reputation:
+- **Babe Ruth** to the Yankees (1919-20) — I can show what Ruth did as a Yankee vs. what Boston got
+- **Nolan Ryan for Jim Fregosi** (1971) — post-trade stats for both
+- **Frank Robinson to Baltimore** (1965) — what Cincinnati gave up vs. what they got
+- **Lou Brock for Ernie Broglio** (1964) — Brock's Cardinals career vs. Broglio's Cubs stint
+
+Any of those interest you? Or name a trade and I'll dig in — just tell me the players and approximate year.

@@ -1,0 +1,109 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== Per (gid, stattype) row count distribution ==
++--------+---------+----------+
+| n_rows | n_teams | n_combos |
++--------+---------+----------+
+|      2 |       2 |   220071 |
+|      1 |       1 |    24882 |
++--------+---------+----------+
+(2 rows)
+
+
+== Per gid: total teamstats row count distribution (across all stattypes) ==
++--------+---------+-------------+--------+
+| n_rows | n_teams | n_stattypes | n_gids |
++--------+---------+-------------+--------+
+|      2 |       2 |           1 | 173731 |
+|      3 |       2 |           2 |  24809 |
+|      4 |       2 |           2 |  10709 |
+|      4 |       2 |           3 |     31 |
+|      6 |       2 |           3 |     20 |
+|      5 |       2 |           3 |     11 |
++--------+---------+-------------+--------+
+(6 rows)
+
+
+== gids in games but NOT in teamstats — RED FLAG ==
++-----+------+----------+---------+
+| gid | date | hometeam | visteam |
++-----+------+----------+---------+
++-----+------+----------+---------+
+(0 rows)
+
+
+== gids in teamstats but NOT in games — RED FLAG ==
++-----+
+| gid |
++-----+
++-----+
+(0 rows)
+
+
+== Anomalous (gid, stattype) combos — anything other than 2 rows / 2 teams ==
++--------------+------------+----------+---------+----------+--------+---------+
+|     gid      |    date    | hometeam | visteam | stattype | n_rows | n_teams |
++--------------+------------+----------+---------+----------+--------+---------+
+| CIN190704110 | 1907-04-11 | CIN      | PIT     | official |      1 |       1 |
+| NY1190704110 | 1907-04-11 | NY1      | PHI     | official |      1 |       1 |
+| PHA190704110 | 1907-04-11 | PHA      | BOS     | official |      1 |       1 |
+| SLA190704110 | 1907-04-11 | SLA      | CHA     | official |      1 |       1 |
+| WS1190704130 | 1907-04-13 | WS1      | NYA     | official |      1 |       1 |
+| SLA190704140 | 1907-04-14 | SLA      | CHA     | official |      1 |       1 |
+| BSN190704150 | 1907-04-15 | BSN      | BRO     | official |      1 |       1 |
+| PHA190704150 | 1907-04-15 | PHA      | BOS     | official |      1 |       1 |
+| BOS190704160 | 1907-04-16 | BOS      | WS1     | official |      1 |       1 |
+| BOS190704170 | 1907-04-17 | BOS      | WS1     | official |      1 |       1 |
+| BRO190704180 | 1907-04-18 | BRO      | NY1     | official |      1 |       1 |
+| BRO190704200 | 1907-04-20 | BRO      | PHI     | official |      1 |       1 |
+| PHA190704200 | 1907-04-20 | PHA      | WS1     | official |      1 |       1 |
+| DET190704220 | 1907-04-22 | DET      | CLE     | official |      1 |       1 |
+| PHA190704220 | 1907-04-22 | PHA      | WS1     | official |      1 |       1 |
+| BSN190704230 | 1907-04-23 | BSN      | NY1     | official |      1 |       1 |
+| CLE190704240 | 1907-04-24 | CLE      | CHA     | official |      1 |       1 |
+| DET190704260 | 1907-04-26 | DET      | SLA     | official |      1 |       1 |
+| NYA190704260 | 1907-04-26 | NYA      | WS1     | official |      1 |       1 |
+| BOS190704270 | 1907-04-27 | BOS      | PHA     | official |      1 |       1 |
+| CIN190704280 | 1907-04-28 | CIN      | PIT     | official |      1 |       1 |
+| WS1190704300 | 1907-04-30 | WS1      | PHA     | official |      1 |       1 |
+| BOS190705010 | 1907-05-01 | BOS      | NYA     | official |      1 |       1 |
+| PIT190705020 | 1907-05-02 | PIT      | SLN     | official |      1 |       1 |
+| NY1190705040 | 1907-05-04 | NY1      | BRO     | official |      1 |       1 |
+| CHN190705050 | 1907-05-05 | CHN      | PIT     | official |      1 |       1 |
+| CIN190705050 | 1907-05-05 | CIN      | SLN     | official |      1 |       1 |
+| CHA190705060 | 1907-05-06 | CHA      | CLE     | official |      1 |       1 |
+| CHA190705070 | 1907-05-07 | CHA      | CLE     | official |      1 |       1 |
+| SLA190705070 | 1907-05-07 | SLA      | DET     | official |      1 |       1 |
+| BRO190705080 | 1907-05-08 | BRO      | CHN     | official |      1 |       1 |
+| BSN190705080 | 1907-05-08 | BSN      | CIN     | official |      1 |       1 |
+| BSN190705090 | 1907-05-09 | BSN      | CIN     | official |      1 |       1 |
+| BSN190705100 | 1907-05-10 | BSN      | CIN     | official |      1 |       1 |
+| BRO190705111 | 1907-05-11 | BRO      | CHN     | official |      1 |       1 |
+| PHI190705110 | 1907-05-11 | PHI      | SLN     | official |      1 |       1 |
+| SLA190705120 | 1907-05-12 | SLA      | WS1     | official |      1 |       1 |
+| BRO190705130 | 1907-05-13 | BRO      | SLN     | official |      1 |       1 |
+| BSN190705130 | 1907-05-13 | BSN      | PIT     | official |      1 |       1 |
+| CHA190705130 | 1907-05-13 | CHA      | PHA     | official |      1 |       1 |
+| NY1190705130 | 1907-05-13 | NY1      | CIN     | official |      1 |       1 |
+| SLA190705130 | 1907-05-13 | SLA      | WS1     | official |      1 |       1 |
+| BSN190705140 | 1907-05-14 | BSN      | PIT     | official |      1 |       1 |
+| NY1190705140 | 1907-05-14 | NY1      | CIN     | official |      1 |       1 |
+| PHI190705140 | 1907-05-14 | PHI      | CHN     | official |      1 |       1 |
+| NY1190705150 | 1907-05-15 | NY1      | CIN     | official |      1 |       1 |
+| PHI190705150 | 1907-05-15 | PHI      | CHN     | official |      1 |       1 |
+| SLA190705150 | 1907-05-15 | SLA      | PHA     | official |      1 |       1 |
+| NY1190705171 | 1907-05-17 | NY1      | SLN     | official |      1 |       1 |
+| PHI190705170 | 1907-05-17 | PHI      | CIN     | official |      1 |       1 |
++--------------+------------+----------+---------+----------+--------+---------+
+(50 rows)
+
+
+== Cross-check: every game has exactly 2 distinct teams in teamstats (any stattype) ==
++------------------+--------+
+| n_distinct_teams | n_gids |
++------------------+--------+
+|                2 | 209311 |
++------------------+--------+
+(1 row)
+

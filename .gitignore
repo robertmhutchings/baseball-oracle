@@ -1,0 +1,59 @@
+# ====================================================================
+# Credentials and secrets — NEVER commit
+# ====================================================================
+.env
+*.env.local
+
+# ====================================================================
+# Python venv and bytecode caches
+# ====================================================================
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ====================================================================
+# Retrosheet source data — too large for git, externally sourced
+# ====================================================================
+data/
+scratch_data/
+
+# ====================================================================
+# Editor / IDE / OS noise
+# ====================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ====================================================================
+# Database backups (defensive)
+# ====================================================================
+*.dump
+*.backup
+*.sql.bak
+
+# ====================================================================
+# Claude Code config
+# Track project-level shared config (.claude/settings.json, etc.)
+# Ignore machine-local config (anything named *.local.*)
+# ====================================================================
+.claude/*.local.json
+
+# ====================================================================
+# Ingest pipeline runtime state — recurring/mutating, not source of truth
+# ====================================================================
+ingest/.ingest_*
+ingest/.missing_columns.log*
+ingest/*.log
+!ingest/phase2_discovery_widths.log
+
+# ====================================================================
+# Google Drive sync artifacts — transient, machine-specific
+# ====================================================================
+.tmp.driveupload/
+.~lock.*
+*conflicted copy*

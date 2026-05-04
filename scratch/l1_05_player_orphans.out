@@ -1,0 +1,64 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== Total orphan counts (plays.batter / plays.pitcher not in retro.players) ==
++---------+----------+----------+------------+
+|   col   | orphan_n | total_n  | orphan_pct |
++---------+----------+----------+------------+
+| batter  |     1948 | 15836549 |     0.0123 |
+| pitcher |        0 | 15836549 |     0.0000 |
++---------+----------+----------+------------+
+(2 rows)
+
+
+== Orphan plays.batter by year (only years with any) ==
++------+------------------+---------------------+
+|  yr  | orphan_play_rows | distinct_orphan_ids |
++------+------------------+---------------------+
+| 1937 |               10 |                   2 |
++------+------------------+---------------------+
+(1 row)
+
+
+== Orphan plays.pitcher by year ==
++----+------------------+---------------------+
+| yr | orphan_play_rows | distinct_orphan_ids |
++----+------------------+---------------------+
++----+------------------+---------------------+
+(0 rows)
+
+
+== Sample of orphan batter IDs (first 30 distinct, with character-length distribution) ==
++----------+--------+
+|  batter  | id_len |
++----------+--------+
+| barnt102 |      8 |
+| dillu101 |      8 |
++----------+--------+
+(2 rows)
+
+
+== Length distribution of orphan batter IDs ==
++--------+--------------+
+| id_len | distinct_ids |
++--------+--------------+
+|      8 |            2 |
++--------+--------------+
+(1 row)
+
+
+== Modern-era (>=1960) orphan batter IDs — RED FLAG if any ==
++----+--------+
+| yr | batter |
++----+--------+
++----+--------+
+(0 rows)
+
+
+== Modern-era (>=1960) orphan pitcher IDs — RED FLAG if any ==
++----+---------+
+| yr | pitcher |
++----+---------+
++----+---------+
+(0 rows)
+

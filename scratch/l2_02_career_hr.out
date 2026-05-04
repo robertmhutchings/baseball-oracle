@@ -1,0 +1,58 @@
+Output format is aligned.
+Border style is 2.
+Null display is "(null)".
+== Resolved retroIDs from biofile0 ==
++----------+---------+----------+--------------------+----------+----------+
+|    id    | usename | lastname |      fullname      | debut_p  |  last_p  |
++----------+---------+----------+--------------------+----------+----------+
+| aaroh101 | Hank    | Aaron    | Henry Louis Aaron  | 19540413 | 19761003 |
+| bondb001 | Barry   | Bonds    | Barry Lamar Bonds  | 19860530 | 20070926 |
+| ruthb101 | Babe    | Ruth     | George Herman Ruth | 19140711 | 19350530 |
++----------+---------+----------+--------------------+----------+----------+
+(3 rows)
+
+
+== Career HR totals (regular season + value stattype) ==
++-------------+-----------+---------------+-----------+------+
+|    label    | target_id | db_hr_regular | target_hr | diff |
++-------------+-----------+---------------+-----------+------+
+| Babe Ruth   | ruthb101  |           714 |       714 |    0 |
+| Barry Bonds | bondb001  |           762 |       762 |    0 |
+| Hank Aaron  | aaroh101  |           755 |       755 |    0 |
++-------------+-----------+---------------+-----------+------+
+(3 rows)
+
+
+== Per-gametype HR breakdown (transparency — confirms postseason is excluded) ==
++----------+----------------+-----+-------+
+|    id    |    gametype    | hr  | games |
++----------+----------------+-----+-------+
+| aaroh101 | allstar        |   2 |    24 |
+| aaroh101 | lcs            |   3 |     3 |
+| aaroh101 | playoff        |   0 |     2 |
+| aaroh101 | regular        | 755 |  3296 |
+| aaroh101 | worldseries    |   3 |    14 |
+| bondb001 | allstar        |   2 |    13 |
+| bondb001 | divisionseries |   3 |    16 |
+| bondb001 | lcs            |   2 |    25 |
+| bondb001 | playoff        |   0 |     1 |
+| bondb001 | regular        | 762 |  2985 |
+| bondb001 | worldseries    |   4 |     7 |
+| ruthb101 | allstar        |   1 |     2 |
+| ruthb101 | exhibition     |   0 |     2 |
+| ruthb101 | regular        | 714 |  2504 |
+| ruthb101 | worldseries    |  15 |    41 |
++----------+----------------+-----+-------+
+(15 rows)
+
+
+== Cross-check via plays.hr (alternate aggregation source) ==
++----------+----------+---------------+
+|    id    | plays_hr | games_with_hr |
++----------+----------+---------------+
+| aaroh101 |      755 |          3294 |
+| bondb001 |      762 |          2973 |
+| ruthb101 |      714 |          2491 |
++----------+----------+---------------+
+(3 rows)
+
