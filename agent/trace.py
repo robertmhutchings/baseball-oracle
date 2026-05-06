@@ -55,3 +55,19 @@ class Trace:
                 lines.append(f"    input:  {call.tool_input}")
                 lines.append(f"    output: {call.tool_output}")
         return "\n".join(lines)
+
+    def serialize(self) -> list[dict[str, Any]]:
+        """Structured trace for JSON output (web /chat response, future eval).
+
+        Returns one dict per call with tool_name, tool_input, tool_output.
+        Tool outputs are already JSON-prepared by the tool implementations
+        (see _to_json_safe in tools.py for run_sql).
+        """
+        return [
+            {
+                "tool_name": call.tool_name,
+                "tool_input": call.tool_input,
+                "tool_output": call.tool_output,
+            }
+            for call in self.calls
+        ]

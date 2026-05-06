@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Oracle</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Baseball Oracle</h1>
+        <button type="button" id="new-conversation-btn">New conversation</button>
+    </header>
+
+    <main id="messages" aria-live="polite"></main>
+
+    <div id="loading" hidden>Thinking…</div>
+
+    <form id="input-form">
+        <textarea
+            id="question-input"
+            placeholder="Ask a baseball question…"
+            rows="2"
+            autofocus
+        ></textarea>
+        <button type="submit" id="send-btn">Send</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@14/marked.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

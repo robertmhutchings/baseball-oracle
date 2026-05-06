@@ -277,11 +277,36 @@ def lookup_team(query: str) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
-# ask_user
+# ask_user — special handling (no Python TOOL_IMPLS impl)
 # ---------------------------------------------------------------------------
-# No Python implementation — this tool pauses the agent loop and routes to
-# the user. main.py special-cases the "ask_user" tool_use name before
-# TOOL_IMPLS dispatch; the user's REPL response becomes the tool_result.
+# This tool pauses the agent loop and routes to the user instead of executing
+# in Python. main.py special-cases the "ask_user" tool_use name before
+# TOOL_IMPLS dispatch:
+#   - REPL path: prints the question, reads a reply via input().
+#   - Web/non-interactive path: invokes the caller's `ask_user_handler`,
+#     which raises `ClarificationRequested` to surface the question as
+#     plain assistant text without inline blocking I/O.
+
+
+class ClarificationRequested(Exception):
+    """Sentinel raised by an `ask_user_handler` (see `agent.main.answer_question`)
+    to signal that the agent's clarification question should be surfaced as
+    plain assistant text, without inline blocking I/O.
+
+    The web layer's handler raises this; `answer_question` catches it,
+    synthesizes a clean text-only assistant turn (no dangling tool_use blocks),
+    and returns the question as the response. The user's reply arrives on the
+    next chat turn as a normal user message; the agent re-runs with the
+    appended history and proceeds from there.
+
+    The CLI REPL does NOT raise this — it handles `ask_user` inline via
+    print/input. This class exists for non-interactive callers only.
+    """
+
+    def __init__(self, question: str):
+        self.question = question
+        super().__init__(question)
+
 
 ASK_USER_TOOL = {
     "name": "ask_user",
