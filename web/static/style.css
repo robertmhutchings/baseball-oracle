@@ -179,6 +179,90 @@ main#messages {
     margin: 8px 0;
 }
 
+/* ---- Trace section (assistant message tool-call breakdown) ----------- */
+
+.message-trace {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+.trace-toggle {
+    font-family: inherit;
+    font-size: 12px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text-subtle);
+    cursor: pointer;
+}
+
+.trace-toggle:hover {
+    background: var(--color-bg-subtle);
+    color: var(--color-text);
+}
+
+.trace-body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.trace-body[hidden] {
+    display: none;
+}
+
+.trace-call {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg-subtle);
+    padding: 8px 10px;
+}
+
+.trace-call-header {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+.trace-call-header .trace-call-num {
+    color: var(--color-text-subtle);
+    font-weight: 400;
+    margin-right: 6px;
+}
+
+.trace-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-subtle);
+    margin: 6px 0 2px;
+}
+
+.trace-call pre {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.trace-call pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
 /* ---- Loading indicator ----------------------------------------------- */
 
 #loading {
