@@ -1,5 +1,63 @@
 # Baseball Oracle — Project Context
 
+## Current Status (session paused)
+
+**Phases complete:** 1, 2, 3A, 3B, 3C (Layers 1, 2, 4), 3D Step 1
+**Phases deferred:** 3C Layer 3 (streaming), 3E (quality polish)
+**Last commits:**
+- ae2517b — CLAUDE.md cleanup (1907-2023 corpus consistency)
+- a443001 — Phase 3C Layer 4 (trace visibility UI)
+- (uncommitted, to be committed in this session) MAX_AGENT_TURNS = 30, was 20
+
+**Tier 2 verified active:** 450k input tokens/min, 1k req/min, 90k output/min for Sonnet.
+
+### Quality Investigation Findings (May 2026)
+
+Through extended testing of hard interpretive questions, identified persistent quality issues that the current architecture does not solve:
+
+**Confirmed pattern: question drift / scope substitution.**
+Agent answers a tangentially related question rather than the one asked. Not flagged. Example: "by age X, who had most rings?" interpreted as "at age X, who won AND has lifetime career most?" Documented in LEARNINGS Entry 21.
+
+**Confirmed pattern: confabulation in prose.**
+Agent generates plausible-sounding reasoning that isn't actually correct. Example: "extremely rare given birth dates" — confabulated explanation for a result the agent itself misinterpreted. Documented in LEARNINGS Entry 22.
+
+**Confirmed pattern: data inflation in counts.**
+Hard questions sometimes return numbers that don't match real-world values (Yogi shows 13 rings, real is 10). Diagnosis incomplete; possibly duplicate counting in joins or off-by-one in age calculation. Worth investigating if project resumes.
+
+**Confirmed pattern: budget changes improve completion, not quality.**
+Tier 2 + MAX_TURNS=30 lets more questions finish. Doesn't improve answer correctness on those that do finish. Documented in LEARNINGS Entry 24.
+
+### Architectural Walls Found
+
+These are limits the current architecture can't reliably get past:
+
+1. **NL → SQL question-understanding ambiguity.** Agent decomposes complex questions into queries that often miss the actual intent. No reliable prompt fix.
+
+2. **Confidence-correctness disconnect.** Agent expresses high confidence regardless of answer quality. Affects user trust in unverified outputs.
+
+3. **Non-determinism in exploration.** Same question produces different tool-call sequences across runs. Quality varies with random initial query choice.
+
+4. **Single-pass synthesis without question verification.** Agent computes, then narrates, with no checkpoint to ask "is this what was asked?"
+
+### Architectural Ceilings (Higher with Different Approach)
+
+These could potentially be raised with fundamental architecture changes (not pursued):
+
+1. Multi-call research mode (decompose hard questions into sub-questions, run separately, synthesize)
+2. Pre-computed materialized views for common question patterns (cumulative stats, by-age progressions, etc.)
+3. Question-confirmation workflow (agent restates interpretation, asks user to confirm before computing)
+4. Cross-run verification (run same question multiple times, compare, flag discrepancies)
+5. Sub-agent dispatching (specialized agents for different question types)
+
+### Project Decision Point
+
+Project is paused for evaluation as of 2026-05-09. Decision pending:
+- Continue and explore one or more ceiling-raising architectures (significant new build)
+- Document and conclude (current state captures the learnings)
+- Continue at current scope for narrower question types where current architecture works (medium and easy questions perform well)
+
+---
+
 ## 1. Project overview
 
 Baseball Oracle is a natural-language Q&A system for historical baseball statistics, sourced from Retrosheet's 1907–2023 play-by-play corpus. Phase 1 goal: load a single season (1998) into PostgreSQL, verify the schema and ingest pipeline end-to-end, and be able to answer 25 benchmark baseball questions via direct SQL. Current state: **Phase 2 complete — full 1907-2023 corpus loaded (28.16M data rows + 28,382 reference rows), verified end-to-end across structural integrity, external statistic cross-checks, and Phase 1 query reproduction.** There is **no agent/LLM pipeline yet** and **no UI yet** — SQL is run manually via psql.

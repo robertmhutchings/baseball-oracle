@@ -22,7 +22,7 @@ SQL_MAX_ROWS = 1_000               # cap returned rows; agent told if truncated
 
 # Conversation budget — single-question guardrail. Stops a runaway loop
 # from racking up cost. Each agent "turn" = one round-trip to Anthropic.
-MAX_AGENT_TURNS = 20
+MAX_AGENT_TURNS = 30
 
 
 def get_anthropic_api_key() -> str:
